@@ -8,7 +8,17 @@ import {
 
   createPayrollRepository,
 
-  getPayrollGenerationsRepository
+  getPayrollGenerationsRepository,
+
+  getPayrollGenerationByIdRepository,
+
+  getPayrollGenerationsByUserRepository,
+
+  markPayrollPaidRepository,
+
+  deletePayrollGenerationRepository,
+
+  getPayrollAttendanceRepository
 
 } from "../repositories/payroll-generation.repository";
 
@@ -70,18 +80,9 @@ export const generatePayrollService = async (
 
     );
 
-  /**
-   * Attendance
-   * (Temporary until Attendance module is integrated)
-   */
+  
 
-  const workingDays = 30;
-
-  const presentDays = 30;
-
-  const absentDays = 0;
-
-  const lopDeduction = 0;
+  
 
   /**
    * Monthly Salary
@@ -89,6 +90,40 @@ export const generatePayrollService = async (
 
   const monthlySalary =
     Number(employeeSalary.monthly_ctc);
+
+
+    /**
+ * Attendance
+ */
+
+        const month =
+        new Date(body.month_year).getMonth() + 1;
+
+        const year =
+        new Date(body.month_year).getFullYear();
+
+        const attendance =
+        await getPayrollAttendanceRepository(
+
+        body.user_id,
+
+        month,
+
+        year
+
+        );
+
+        const workingDays =
+        attendance.workingDays;
+
+        const presentDays =
+        attendance.presentDays;
+
+        const absentDays =
+        attendance.absentDays;
+
+        const halfDays =
+        attendance.halfDays;
 
   /**
    * Earnings
@@ -140,6 +175,23 @@ export const generatePayrollService = async (
 
   const professionalTax =
     Number(employeeSalary.professional_tax_monthly);
+
+    /**
+ * LOP Calculation
+ */
+
+const perDaySalary =
+workingDays > 0
+? monthlySalary / workingDays
+: 0;
+
+const lopDeduction =
+
+(absentDays * perDaySalary)
+
++
+
+((halfDays * perDaySalary) / 2);
 
   const tdsDeduction = 0;
 
@@ -287,5 +339,67 @@ export const generatePayrollService = async (
 export const getPayrollGenerationsService = async () => {
 
   return await getPayrollGenerationsRepository();
+
+};
+
+/**
+ * Get Payroll By Id
+ */
+
+export const getPayrollGenerationByIdService = async (
+  id: string
+) => {
+
+  return await getPayrollGenerationByIdRepository(id);
+
+};
+
+/**
+ * Get Payrolls By User
+ */
+
+export const getPayrollGenerationsByUserService = async (
+  userId: string
+) => {
+
+  return await getPayrollGenerationsByUserRepository(
+    userId
+  );
+
+};
+
+/**
+ * Mark Payroll Paid
+ */
+
+export const markPayrollPaidService = async (
+
+  id: string,
+
+  paymentId: string
+
+) => {
+
+  return await markPayrollPaidRepository(
+
+    id,
+
+    paymentId
+
+  );
+
+};
+
+/**
+ * Delete Payroll
+ */
+
+export const deletePayrollGenerationService = async (
+  id: string
+) => {
+
+  return await deletePayrollGenerationRepository(
+    id
+  );
 
 };

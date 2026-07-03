@@ -4,7 +4,16 @@ import {
 
   generatePayroll,
 
-  getPayrollGenerations
+  getPayrollGenerations,
+
+  getPayrollGenerationById,
+
+  getPayrollGenerationsByUser,
+
+  markPayrollPaid,
+
+  deletePayrollGeneration
+
 
 } from "../../controllers/payroll-generation.controller";
 
@@ -16,7 +25,9 @@ import { rbac } from "../../middlewares/rbac.middleware";
 
 import {
 
-  generatePayrollSchema
+  generatePayrollSchema,
+
+  markPayrollPaidSchema
 
 } from "../../validations/payroll-generation.validation";
 
@@ -61,6 +72,104 @@ router.get(
   ]),
 
   getPayrollGenerations
+
+);
+
+/**
+ * Get Payrolls By User
+ */
+
+router.get(
+
+  "/user/:userId",
+
+  authMiddleware,
+
+  rbac([
+
+    "super_admin",
+
+    "hr_admin",
+
+    "finance"
+
+  ]),
+
+  getPayrollGenerationsByUser
+
+);
+
+/**
+ * Mark Payroll Paid
+ */
+
+router.patch(
+
+  "/pay/:id",
+
+  authMiddleware,
+
+  rbac([
+
+    "super_admin",
+
+    "finance"
+
+  ]),
+
+  validationMiddleware(
+
+    markPayrollPaidSchema
+
+  ),
+
+  markPayrollPaid
+
+);
+
+
+/**
+ * Get Payroll By Id
+ */
+
+router.get(
+
+  "/:id",
+
+  authMiddleware,
+
+  rbac([
+
+    "super_admin",
+
+    "hr_admin",
+
+    "finance"
+
+  ]),
+
+  getPayrollGenerationById
+
+);
+
+
+/**
+ * Delete Payroll
+ */
+
+router.delete(
+
+  "/:id",
+
+  authMiddleware,
+
+  rbac([
+
+    "super_admin"
+
+  ]),
+
+  deletePayrollGeneration
 
 );
 

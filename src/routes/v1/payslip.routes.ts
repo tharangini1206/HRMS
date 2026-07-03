@@ -2,101 +2,101 @@ import express from "express";
 
 import {
 
-  createPayslip,
+  generatePayslip,
 
-  getPayslip,
+  getEmployeePayslips,
 
-  getPayslipById,
-
-  uploadPayslip
+  downloadPayslip
 
 } from "../../controllers/payslip.controller";
 
-import {
+import { authMiddleware } from "../../middlewares/auth.middleware";
 
-  validationMiddleware
+import { validationMiddleware } from "../../middlewares/validation.middleware";
 
-} from "../../middlewares/validation.middleware";
+import { rbac } from "../../middlewares/rbac.middleware";
 
-import {
 
-  createPayslipSchema,
-
-  getPayslipSchema,
-
-  getPayslipByIdSchema,
-
-  uploadPayslipSchema
-
-} from "../../validations/payslip.validation";
 
 const router = express.Router();
 
 /**
  * Generate Payslip
  */
+
 router.post(
 
-  "/generate",
+  "/generate/:payrollId",
 
-  validationMiddleware(
+  authMiddleware,
 
-    createPayslipSchema
+  rbac([
 
-  ),
+    "super_admin",
 
-  createPayslip
+    "hr_admin",
+
+    "finance"
+
+  ]),
+
+  generatePayslip
 
 );
 
 /**
- * Employee Payslip History
+ * Employee Payslips
  */
+
 router.get(
 
-  "/employee/:employeeId",
+  "/user/:userId",
 
-  validationMiddleware(
+  authMiddleware,
 
-    getPayslipSchema
+  rbac([
 
-  ),
+    "employee",
 
-  getPayslip
+    "manager",
+
+    "hr_admin",
+
+    "finance",
+
+    "super_admin"
+
+  ]),
+
+  getEmployeePayslips
 
 );
 
 /**
- * Payslip Details
+ * Download Payslip
  */
+
 router.get(
 
-  "/:payslipId",
+  "/download/:id",
 
-  validationMiddleware(
+  authMiddleware,
 
-    getPayslipByIdSchema
+  rbac([
 
-  ),
+    "employee",
 
-  getPayslipById
+    "manager",
 
-);
+    "hr_admin",
 
-/**
- * Update Signed URL
- */
-router.put(
+    "finance",
 
-  "/upload",
+    "super_admin"
 
-  validationMiddleware(
+  ]),
 
-    uploadPayslipSchema
-
-  ),
-
-  uploadPayslip
+  downloadPayslip
 
 );
 

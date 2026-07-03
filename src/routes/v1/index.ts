@@ -8,10 +8,12 @@ import employeeRoutes from "./employee.routes";
 import onboardingRoutes from "./onboarding.routes";
 import payrollRoutes from "./payroll.routes";
 import salaryComponentRoutes from "./salary-component.routes";
+import attendanceRoutes from "./attendance.routes";
 import payrollGenerationRoutes from "./payroll-generation.routes";
-
-
 import payslipRoutes from "./payslip.routes";
+import salaryStatementRoutes from "./salary-statement.routes";
+
+
 import resignationRoutes from "./resignation.routes";
 import settlementRoutes from "./settlement.routes";
 import performanceRoutes from "./performance.routes";
@@ -30,9 +32,13 @@ router.use("/employees", employeeRoutes);
 router.use("/onboarding", onboardingRoutes);
 router.use("/payroll", payrollRoutes);
 router.use("/salary-components", salaryComponentRoutes);
+router.use("/attendance", attendanceRoutes);
 router.use("/payroll-generation",payrollGenerationRoutes);
-
 router.use("/payslip",payslipRoutes);
+router.use("/salary-statements",salaryStatementRoutes);
+
+
+
 router.use("/resignation", resignationRoutes);
 router.use("/settlement", settlementRoutes);
 router.use("/performance", performanceRoutes);

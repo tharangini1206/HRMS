@@ -1,68 +1,129 @@
 import { supabase } from "../config/supabase";
 
 /**
- * Get Employee Payslip
+ * Get Payroll By Public Id
  */
-export const getPayslipRepository = async (
-  employeeId: string
+
+export const getPayrollByIdRepository = async (
+  payrollId: string
 ) => {
 
-  return await supabase
-    .from("payslips")
+  const { data, error } = await supabase
+    .from("payroll")
     .select("*")
-    .eq("employee_id", employeeId)
-    .order("created_at", { ascending: false });
+    .eq("public_id", payrollId)
+    .single();
+
+  if (error) {
+    throw new Error(error.message);
+  }
+
+  return data;
 
 };
 
 /**
- * Get Payslip By Id
+ * Check Payslip Already Exists
  */
-export const getPayslipByIdRepository = async (
-  payslipId: string
+
+export const getPayslipRepository = async (
+  userId: string,
+  monthYear: string
 ) => {
 
-  return await supabase
+  const { data, error } = await supabase
     .from("payslips")
     .select("*")
-    .eq("id", payslipId)
-    .single();
+    .eq("user_id", userId)
+    .eq("month_year", monthYear)
+    .maybeSingle();
+
+  if (error) {
+    throw new Error(error.message);
+  }
+
+  return data;
 
 };
 
 /**
  * Save Payslip
  */
+
 export const createPayslipRepository = async (
   body: any
 ) => {
 
-  return await supabase
+  const { data, error } = await supabase
     .from("payslips")
-    .insert([body])
-    .select();
+    .insert(body)
+    .select()
+    .single();
+
+  if (error) {
+    throw new Error(error.message);
+  }
+
+  return data;
+
+};
+
+
+
+/**
+ * Get Employee Payslips
+ */
+
+export const getEmployeePayslipsRepository = async (
+
+  userId: string
+
+) => {
+
+  const { data, error } =
+    await supabase
+      .from("payslips")
+      .select("*")
+      .eq("user_id", userId)
+      .order("month_year", {
+
+        ascending: false
+
+      });
+
+  if (error) {
+
+    throw new Error(error.message);
+
+  }
+
+  return data;
 
 };
 
 /**
- * Update Storage URL
+ * Get Payslip By Public Id
  */
-export const updatePayslipUrlRepository = async (
 
-  payslipId: string,
+export const getPayslipByIdRepository = async (
 
-  signedUrl: string
+  id: string
 
 ) => {
 
-  return await supabase
-    .from("payslips")
-    .update({
+  const { data, error } =
+    await supabase
+      .from("payslips")
+      .select("*")
+      .eq("public_id", id)
+      .single();
 
-      signed_url: signedUrl
+  if (error) {
 
-    })
-    .eq("id", payslipId)
-    .select();
+    throw new Error(error.message);
+
+  }
+
+  return data;
 
 };

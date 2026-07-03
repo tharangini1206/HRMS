@@ -2,13 +2,13 @@ import { Request, Response, NextFunction } from "express";
 
 import {
 
-  generatePayslipService,
+  getSalaryStatementService,
 
-  getEmployeePayslipsService,
+  getSalaryHistoryService,
 
-  getPayslipDownloadService
+  getMonthlyPayrollSummaryService
 
-} from "../services/payslip.service";
+} from "../services/salary-statement.service";
 
 import { sendResponse } from "../utils/response";
 
@@ -19,10 +19,10 @@ type AuthRequest = Request & {
 };
 
 /**
- * Generate Payslip
+ * Get Employee Salary Statement
  */
 
-export const generatePayslip = async (
+export const getSalaryStatement = async (
 
   req: AuthRequest,
 
@@ -35,11 +35,11 @@ export const generatePayslip = async (
   try {
 
     const result =
-      await generatePayslipService(
+      await getSalaryStatementService(
 
-        String(req.params.payrollId),
+        String(req.params.userId),
 
-        req.user.id
+        String(req.params.monthYear)
 
       );
 
@@ -47,9 +47,9 @@ export const generatePayslip = async (
 
       res,
 
-      201,
+      200,
 
-      "Payslip generated successfully",
+      "Salary statement fetched successfully",
 
       result
 
@@ -64,12 +64,12 @@ export const generatePayslip = async (
 };
 
 /**
- * Get Employee Payslips
+ * Get Salary History
  */
 
-export const getEmployeePayslips = async (
+export const getSalaryHistory = async (
 
-  req: Request,
+  req: AuthRequest,
 
   res: Response,
 
@@ -80,7 +80,7 @@ export const getEmployeePayslips = async (
   try {
 
     const result =
-      await getEmployeePayslipsService(
+      await getSalaryHistoryService(
 
         String(req.params.userId)
 
@@ -92,7 +92,7 @@ export const getEmployeePayslips = async (
 
       200,
 
-      "Employee payslips fetched successfully",
+      "Salary history fetched successfully",
 
       result
 
@@ -107,10 +107,10 @@ export const getEmployeePayslips = async (
 };
 
 /**
- * Download Payslip
+ * Monthly Payroll Summary
  */
 
-export const downloadPayslip = async (
+export const getMonthlyPayrollSummary = async (
 
   req: Request,
 
@@ -123,9 +123,9 @@ export const downloadPayslip = async (
   try {
 
     const result =
-      await getPayslipDownloadService(
+      await getMonthlyPayrollSummaryService(
 
-        String(req.params.id)
+        String(req.params.monthYear)
 
       );
 
@@ -135,7 +135,7 @@ export const downloadPayslip = async (
 
       200,
 
-      "Payslip download url generated successfully",
+      "Monthly payroll summary fetched successfully",
 
       result
 
