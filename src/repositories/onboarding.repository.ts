@@ -10,219 +10,90 @@ export const createOnboardingRepository = async (
 
   /**
    * STEP 1
-   * Create Login Account
+   * Find Employee
    */
 
-  const { data: authData, error: authError } =
-    await supabase.auth.admin.createUser({
+  const {
+    data: user,
+    error: userError
+  } = await supabase
+    .from("users")
+    .select("auth_user_id")
+    .eq("public_id", body.user_public_id)
+    .is("deleted_at", null)
+    .single();
 
-      email: body.email,
-
-      password: body.password,
-
-      email_confirm: true
-
-    });
-
-  if (authError) {
-
-    throw new Error(authError.message);
-
-  }
-
-  if (!authData.user) {
-
-    throw new Error("Unable to create auth user");
-
+  if (userError) {
+    throw new Error("Employee not found.");
   }
 
   /**
    * STEP 2
-   * Insert into users table
+   * Check Existing Onboarding
    */
 
-  const { data: userData, error: userError } =
-    await supabase
-      .from("users")
-      .insert([
-        {
+  const {
+    data: existingProfile
+  } = await supabase
+    .from("employee_profiles")
+    .select("id")
+    .eq("user_id", user.auth_user_id)
+    .maybeSingle();
 
-          auth_user_id: authData.user.id,
-
-          employee_id: body.employee_id,
-
-          first_name: body.first_name,
-
-          last_name: body.last_name,
-
-          email: body.email,
-
-          phone: body.phone,
-
-          profile_pic_url: body.profile_pic_url,
-
-          date_of_birth: body.date_of_birth,
-
-          gender: body.gender,
-
-          marital_status: body.marital_status,
-
-          current_address: body.current_address,
-
-          permanent_address: body.permanent_address,
-
-          emergency_contact_name:
-            body.emergency_contact_name,
-
-          emergency_contact_phone:
-            body.emergency_contact_phone,
-
-          emergency_contact_relation:
-            body.emergency_contact_relation,
-
-          bank_account_number:
-            body.bank_account_number,
-
-          bank_ifsc_code:
-            body.bank_ifsc_code,
-
-          pan_number:
-            body.pan_number,
-
-          aadhaar_number:
-            body.aadhaar_number,
-
-          passport_number:
-            body.passport_number,
-
-          status:
-            body.status ?? "active"
-
-        }
-      ])
-      .select()
-      .single();
-
-  if (userError) {
-
-    throw new Error(userError.message);
-
+  if (existingProfile) {
+    throw new Error("Employee onboarding already completed.");
   }
 
   /**
    * STEP 3
-   * Insert into employee_profiles
+   * Create Employee Profile
    */
 
-  const { data: profileData, error: profileError } =
-    await supabase
-      .from("employee_profiles")
-      .insert([
-        {
-
-          user_id:
-            authData.user.id,
-
-          department_id:
-            body.department_id,
-
-          role_id:
-            body.role_id,
-
-          designation_id:
-            body.designation_id,
-
-          manager_id:
-            body.manager_id,
-
-          hr_manager_id:
-            body.hr_manager_id,
-
-          hire_date:
-            body.hire_date,
-
-          confirmation_date:
-            body.confirmation_date,
-
-          resignation_date:
-            body.resignation_date,
-
-          last_working_day:
-            body.last_working_day,
-
-          employment_type:
-            body.employment_type,
-
-          work_location:
-            body.work_location,
-
-          shift_start:
-            body.shift_start,
-
-          shift_end:
-            body.shift_end,
-
-          work_days:
-            body.work_days,
-
-          grace_period_minutes:
-            body.grace_period_minutes,
-
-          weekly_working_hours:
-            body.weekly_working_hours
-
-        }
-      ])
-      .select()
-      .single();
-
-  if (profileError) {
-
-    throw new Error(profileError.message);
-
-  }
-
-  return {
-
-    user: userData,
-
-    profile: profileData
-
-  };
-
-};
-
-/**
- * Get All Employees
- */
-
-export const getOnboardingsRepository = async () => {
-
-  const { data, error } = await supabase
+  const {
+    data,
+    error
+  } = await supabase
     .from("employee_profiles")
-    .select("*")
-    .order("created_at", { ascending: false });
+    .insert({
 
-  if (error) {
-    throw new Error(error.message);
-  }
+      user_id: user.auth_user_id,
 
-  return data;
+      department_id: body.department_id,
 
-};
+      role_id: body.role_id,
 
-/**
- * Get Employee By Id
- */
+      designation_id: body.designation_id,
 
-export const getOnboardingByIdRepository = async (
-  id: string
-) => {
+      manager_id: body.manager_id,
 
-  const { data, error } = await supabase
-    .from("employee_profiles")
-    .select("*")
-    .eq("public_id", id)
+      hr_manager_id: body.hr_manager_id,
+
+      hire_date: body.hire_date,
+
+      confirmation_date: body.confirmation_date,
+
+      resignation_date: body.resignation_date,
+
+      last_working_day: body.last_working_day,
+
+      employment_type: body.employment_type,
+
+      work_location: body.work_location,
+
+      shift_start: body.shift_start,
+
+      shift_end: body.shift_end,
+
+      work_days: body.work_days,
+
+      grace_period_minutes:
+        body.grace_period_minutes,
+
+      weekly_working_hours:
+        body.weekly_working_hours
+
+    })
+    .select()
     .single();
 
   if (error) {
@@ -234,34 +105,150 @@ export const getOnboardingByIdRepository = async (
 };
 
 /**
- * Update Employee Profile
+ * Get All Employee Onboardings
  */
 
-export const updateOnboardingRepository =
-async (
+export const getOnboardingsRepository = async () => {
+
+  const { data: profiles, error } = await supabase
+    .from("employee_profiles")
+    .select("*")
+    .order("created_at", {
+      ascending: false
+    });
+
+  if (error) {
+    throw new Error(error.message);
+  }
+
+  const result = [];
+
+  for (const profile of profiles ?? []) {
+
+    const { data: user } = await supabase
+      .from("users")
+      .select(`
+        public_id,
+        employee_id,
+        first_name,
+        last_name,
+        email,
+        phone,
+        status
+      `)
+      .eq("auth_user_id", profile.user_id)
+      .single();
+
+    result.push({
+      ...profile,
+      user
+    });
+
+  }
+
+  return result;
+
+};
+
+/**
+ * Get Employee Onboarding By Profile Public ID
+ */
+
+export const getOnboardingByIdRepository = async (
+  id: string
+) => {
+
+  const { data: profile, error } = await supabase
+    .from("employee_profiles")
+    .select("*")
+    .eq("public_id", id)
+    .single();
+
+  if (error) {
+    throw new Error(error.message);
+  }
+
+  const { data: user } = await supabase
+    .from("users")
+    .select(`
+      public_id,
+      employee_id,
+      first_name,
+      last_name,
+      email,
+      phone,
+      status
+    `)
+    .eq("auth_user_id", profile.user_id)
+    .single();
+
+  return {
+    ...profile,
+    user
+  };
+
+};
+
+/**
+ * Update Employee Onboarding
+ */
+
+export const updateOnboardingRepository = async (
   id: string,
   body: any
 ) => {
 
-  const { data, error } =
-    await supabase
-      .from("employee_profiles")
-      .update({
+  const {
+    data,
+    error
+  } = await supabase
+    .from("employee_profiles")
+    .update({
 
-        ...body,
+      department_id: body.department_id,
 
-        updated_at:
-          new Date().toISOString()
+      role_id: body.role_id,
 
-      })
-      .eq("public_id", id)
-      .select()
-      .single();
+      designation_id: body.designation_id,
+
+      manager_id: body.manager_id,
+
+      hr_manager_id: body.hr_manager_id,
+
+      hire_date: body.hire_date,
+
+      confirmation_date: body.confirmation_date,
+
+      resignation_date: body.resignation_date,
+
+      last_working_day: body.last_working_day,
+
+      employment_type: body.employment_type,
+
+      work_location: body.work_location,
+
+      shift_start: body.shift_start,
+
+      shift_end: body.shift_end,
+
+      work_days: body.work_days,
+
+      grace_period_minutes:
+        body.grace_period_minutes,
+
+      weekly_working_hours:
+        body.weekly_working_hours,
+
+      updated_at:
+        new Date().toISOString()
+
+    })
+    .eq("public_id", id)
+    .select()
+    .single();
 
   if (error) {
-
     throw new Error(error.message);
-
   }
 
   return data;
@@ -269,26 +256,25 @@ async (
 };
 
 /**
- * Delete Employee Profile
+ * Delete Employee Onboarding
  */
 
-export const deleteOnboardingRepository =
-async (
+export const deleteOnboardingRepository = async (
   id: string
 ) => {
 
-  const { data, error } =
-    await supabase
-      .from("employee_profiles")
-      .delete()
-      .eq("public_id", id)
-      .select()
-      .single();
+  const {
+    data,
+    error
+  } = await supabase
+    .from("employee_profiles")
+    .delete()
+    .eq("public_id", id)
+    .select()
+    .single();
 
   if (error) {
-
     throw new Error(error.message);
-
   }
 
   return data;

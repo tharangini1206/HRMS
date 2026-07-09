@@ -2,6 +2,10 @@ import { supabase } from "../config/supabase";
 
 /**
  * Create Employee
+ * Flow:
+ * 1. Create auth.users
+ * 2. Insert into public.users
+ * 3. Rollback auth user if users insert fails
  */
 export const createEmployeeRepository = async (
   body: any
@@ -9,7 +13,7 @@ export const createEmployeeRepository = async (
 
   /**
    * Step 1
-   * Create user in Supabase Authentication
+   * Create Supabase Auth User
    */
 
   const { data: authData, error: authError } =
@@ -28,7 +32,7 @@ export const createEmployeeRepository = async (
   }
 
   if (!authData.user) {
-    throw new Error("Failed to create auth user");
+    throw new Error("Failed to create authentication user.");
   }
 
   /**
@@ -39,66 +43,75 @@ export const createEmployeeRepository = async (
   const { data, error } =
     await supabase
       .from("users")
-      .insert([
-        {
+      .insert({
 
-          auth_user_id: authData.user.id,
+        auth_user_id: authData.user.id,
 
-          employee_id: body.employee_id,
+        employee_id: body.employee_id,
 
-          first_name: body.first_name,
+        first_name: body.first_name,
 
-          last_name: body.last_name,
+        last_name: body.last_name,
 
-          email: body.email,
+        email: body.email,
 
-          phone: body.phone,
+        phone: body.phone,
 
-          profile_pic_url: body.profile_pic_url,
+        profile_pic_url: body.profile_pic_url,
 
-          date_of_birth: body.date_of_birth,
+        date_of_birth: body.date_of_birth,
 
-          gender: body.gender,
+        gender: body.gender,
 
-          marital_status: body.marital_status,
+        marital_status: body.marital_status,
 
-          current_address: body.current_address,
+        current_address: body.current_address,
 
-          permanent_address: body.permanent_address,
+        permanent_address: body.permanent_address,
 
-          emergency_contact_name: body.emergency_contact_name,
+        emergency_contact_name:
+          body.emergency_contact_name,
 
-          emergency_contact_phone:
-            body.emergency_contact_phone,
+        emergency_contact_phone:
+          body.emergency_contact_phone,
 
-          emergency_contact_relation:
-            body.emergency_contact_relation,
+        emergency_contact_relation:
+          body.emergency_contact_relation,
 
-          bank_account_number:
-            body.bank_account_number,
+        bank_account_number:
+          body.bank_account_number,
 
-          bank_ifsc_code:
-            body.bank_ifsc_code,
+        bank_ifsc_code:
+          body.bank_ifsc_code,
 
-          pan_number:
-            body.pan_number,
+        pan_number:
+          body.pan_number,
 
-          aadhaar_number:
-            body.aadhaar_number,
+        aadhaar_number:
+          body.aadhaar_number,
 
-          passport_number:
-            body.passport_number,
+        passport_number:
+          body.passport_number,
 
-          status:
-            body.status ?? "active"
+        status:
+          body.status ?? "active"
 
-        }
-      ])
+      })
       .select()
       .single();
 
+  /**
+   * Rollback Auth User
+   */
+
   if (error) {
+
+    await supabase.auth.admin.deleteUser(
+      authData.user.id
+    );
+
     throw new Error(error.message);
+
   }
 
   return data;
@@ -129,7 +142,7 @@ export const getEmployeesRepository = async () => {
 };
 
 /**
- * Get Employee By Id
+ * Get Employee By Public Id
  */
 
 export const getEmployeeByIdRepository = async (
@@ -154,6 +167,7 @@ export const getEmployeeByIdRepository = async (
 
 /**
  * Update Employee
+ * Updates only public.users
  */
 
 export const updateEmployeeRepository = async (
@@ -161,14 +175,68 @@ export const updateEmployeeRepository = async (
   body: any
 ) => {
 
+  const updatePayload = {
+
+    employee_id: body.employee_id,
+
+    first_name: body.first_name,
+
+    last_name: body.last_name,
+
+    email: body.email,
+
+    phone: body.phone,
+
+    profile_pic_url: body.profile_pic_url,
+
+    date_of_birth: body.date_of_birth,
+
+    gender: body.gender,
+
+    marital_status: body.marital_status,
+
+    current_address: body.current_address,
+
+    permanent_address: body.permanent_address,
+
+    emergency_contact_name:
+      body.emergency_contact_name,
+
+    emergency_contact_phone:
+      body.emergency_contact_phone,
+
+    emergency_contact_relation:
+      body.emergency_contact_relation,
+
+    bank_account_number:
+      body.bank_account_number,
+
+    bank_ifsc_code:
+      body.bank_ifsc_code,
+
+    pan_number:
+      body.pan_number,
+
+    aadhaar_number:
+      body.aadhaar_number,
+
+    passport_number:
+      body.passport_number,
+
+    status:
+      body.status,
+
+    updated_at:
+      new Date().toISOString()
+
+  };
+
   const { data, error } =
     await supabase
       .from("users")
-      .update({
-        ...body,
-        updated_at: new Date().toISOString()
-      })
+      .update(updatePayload)
       .eq("public_id", id)
+      .is("deleted_at", null)
       .select()
       .single();
 
@@ -188,16 +256,37 @@ export const deleteEmployeeRepository = async (
   id: string
 ) => {
 
+  /**
+   * Find Employee
+   */
+
+  const { data: employee, error: findError } =
+    await supabase
+      .from("users")
+      .select("auth_user_id")
+      .eq("public_id", id)
+      .single();
+
+  if (findError) {
+    throw new Error(findError.message);
+  }
+
+  /**
+   * Soft Delete public.users
+   */
+
   const { data, error } =
     await supabase
       .from("users")
       .update({
 
+        status: "inactive",
+
         deleted_at:
           new Date().toISOString(),
 
-        status:
-          "inactive"
+        updated_at:
+          new Date().toISOString()
 
       })
       .eq("public_id", id)
@@ -206,6 +295,22 @@ export const deleteEmployeeRepository = async (
 
   if (error) {
     throw new Error(error.message);
+  }
+
+  /**
+   * Disable Login
+   * (Soft delete auth user)
+   */
+
+  if (employee?.auth_user_id) {
+
+    await supabase.auth.admin.updateUserById(
+      employee.auth_user_id,
+      {
+        ban_duration: "876000h"
+      }
+    );
+
   }
 
   return data;

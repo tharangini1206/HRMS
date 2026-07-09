@@ -1,7 +1,8 @@
 import { supabase } from "../config/supabase";
 import { attendanceRepository } from "./attendance.repository";
+
 /**
- * Get Employee Salary
+ * Get Active Employee Salary
  */
 
 export const getEmployeeSalaryRepository = async (
@@ -27,11 +28,45 @@ export const getEmployeeSalaryRepository = async (
 };
 
 /**
- * Get Salary Components
+ * Get Active Statutory Configurations
  */
 
-export const getSalaryComponentsRepository = async (
-  userId: string
+export const getStatutoryConfigRepository =
+async () => {
+
+  const { data, error } =
+    await supabase
+      .from("statutory_config")
+      .select("*")
+      .eq("is_active", true);
+
+  if (error) {
+
+    throw new Error(error.message);
+
+  }
+
+  const config: any = {};
+
+  data.forEach((item: any) => {
+
+    config[item.config_name] =
+      Number(item.config_value);
+
+  });
+
+  return config;
+
+};
+
+/**
+ * Get Active Salary Components
+ */
+
+export const getSalaryComponentsRepository =
+async (
+  userId: string,
+  monthYear: string
 ) => {
 
   const { data, error } =
@@ -39,7 +74,8 @@ export const getSalaryComponentsRepository = async (
       .from("salary_components")
       .select("*")
       .eq("user_id", userId)
-      .eq("is_active", true);
+      .eq("is_active", true)
+      .lte("effective_date", monthYear);
 
   if (error) {
 
@@ -52,10 +88,11 @@ export const getSalaryComponentsRepository = async (
 };
 
 /**
- * Check Payroll Already Generated
+ * Check Payroll Exists
  */
 
-export const checkPayrollExistsRepository = async (
+export const checkPayrollExistsRepository =
+async (
 
   userId: string,
 
@@ -85,11 +122,10 @@ export const checkPayrollExistsRepository = async (
  * Insert Payroll
  */
 
-export const createPayrollRepository = async (
+export const createPayrollRepository =
+async (
   body: any
 ) => {
-
-  console.log("Repository Payload :", body);
 
   const { data, error } =
     await supabase
@@ -109,16 +145,48 @@ export const createPayrollRepository = async (
 };
 
 /**
+ * Get Attendance Summary
+ */
+
+export const getPayrollAttendanceRepository =
+async (
+
+  userId: string,
+
+  month: number,
+
+  year: number
+
+) => {
+
+  return await attendanceRepository.getPayrollAttendance(
+
+    userId,
+
+    month,
+
+    year
+
+  );
+
+};
+
+/**
  * Get All Payrolls
  */
 
-export const getPayrollGenerationsRepository = async () => {
+export const getPayrollGenerationsRepository =
+async () => {
 
   const { data, error } =
     await supabase
       .from("payroll")
       .select("*")
-      .order("created_at", { ascending: false });
+      .order("month_year", {
+
+        ascending: false
+
+      });
 
   if (error) {
 
@@ -130,12 +198,12 @@ export const getPayrollGenerationsRepository = async () => {
 
 };
 
-
 /**
  * Get Payroll By Id
  */
 
-export const getPayrollGenerationByIdRepository = async (
+export const getPayrollGenerationByIdRepository =
+async (
   id: string
 ) => {
 
@@ -160,7 +228,8 @@ export const getPayrollGenerationByIdRepository = async (
  * Get Payrolls By User
  */
 
-export const getPayrollGenerationsByUserRepository = async (
+export const getPayrollGenerationsByUserRepository =
+async (
   userId: string
 ) => {
 
@@ -169,7 +238,11 @@ export const getPayrollGenerationsByUserRepository = async (
       .from("payroll")
       .select("*")
       .eq("user_id", userId)
-      .order("month_year", { ascending: false });
+      .order("month_year", {
+
+        ascending: false
+
+      });
 
   if (error) {
 
@@ -185,7 +258,8 @@ export const getPayrollGenerationsByUserRepository = async (
  * Mark Payroll Paid
  */
 
-export const markPayrollPaidRepository = async (
+export const markPayrollPaidRepository =
+async (
 
   id: string,
 
@@ -202,9 +276,9 @@ export const markPayrollPaidRepository = async (
 
         is_paid: true,
 
-        paid_at: new Date().toISOString(),
-
         payment_id: paymentId,
+
+        paid_at: new Date().toISOString(),
 
         updated_at: new Date().toISOString()
 
@@ -227,7 +301,8 @@ export const markPayrollPaidRepository = async (
  * Delete Payroll
  */
 
-export const deletePayrollGenerationRepository = async (
+export const deletePayrollGenerationRepository =
+async (
   id: string
 ) => {
 
@@ -246,31 +321,5 @@ export const deletePayrollGenerationRepository = async (
   }
 
   return data;
-
-};
-
-/**
- * Payroll Attendance
- */
-
-export const getPayrollAttendanceRepository = async (
-
-  userId: string,
-
-  month: number,
-
-  year: number
-
-) => {
-
-  return await attendanceRepository.getPayrollAttendance(
-
-    userId,
-
-    month,
-
-    year
-
-  );
 
 };

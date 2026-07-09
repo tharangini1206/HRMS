@@ -14,45 +14,17 @@ export const createPayrollRepository = async (
       .insert([
         {
 
-          user_id: body.user_id,
+          user_id:
+            body.user_id,
 
-          annual_ctc: body.annual_ctc,
+          annual_ctc:
+            body.annual_ctc,
 
-          basic_percentage:
-            body.basic_percentage,
+          variable_pay_percentage:
+            body.variable_pay_percentage ?? 0,
 
-          hra_percentage:
-            body.hra_percentage,
-
-          special_allowance:
-            body.special_allowance,
-
-          conveyance:
-            body.conveyance,
-
-          medical:
-            body.medical,
-
-          pf_employee_percentage:
-            body.pf_employee_percentage,
-
-          pf_employer_percentage:
-            body.pf_employer_percentage,
-
-          esi_employee_percentage:
-            body.esi_employee_percentage,
-
-          esi_employer_percentage:
-            body.esi_employer_percentage,
-
-          professional_tax_monthly:
-            body.professional_tax_monthly,
-
-          gratuity_percentage:
-            body.gratuity_percentage,
-
-          bonus_percentage:
-            body.bonus_percentage,
+          annual_income_tax:
+            body.annual_income_tax ?? 0,
 
           effective_date:
             body.effective_date
@@ -76,13 +48,17 @@ export const createPayrollRepository = async (
  * Get All Employee Salaries
  */
 
-export const getPayrollsRepository =
-async () => {
+export const getPayrollsRepository = async () => {
 
   const { data, error } =
     await supabase
       .from("employee_salary")
-      .select("*");
+      .select("*")
+      .order("created_at", {
+
+        ascending: false
+
+      });
 
   if (error) {
 
@@ -98,8 +74,7 @@ async () => {
  * Get Employee Salary By Id
  */
 
-export const getPayrollByIdRepository =
-async (
+export const getPayrollByIdRepository = async (
   id: string
 ) => {
 
@@ -124,8 +99,7 @@ async (
  * Update Employee Salary
  */
 
-export const updatePayrollRepository =
-async (
+export const updatePayrollRepository = async (
   id: string,
   body: any
 ) => {
@@ -135,7 +109,20 @@ async (
       .from("employee_salary")
       .update({
 
-        ...body,
+        annual_ctc:
+          body.annual_ctc,
+
+        variable_pay_percentage:
+          body.variable_pay_percentage,
+
+        annual_income_tax:
+          body.annual_income_tax,
+
+        effective_date:
+          body.effective_date,
+
+        is_active:
+          body.is_active,
 
         updated_at:
           new Date().toISOString()
@@ -159,8 +146,7 @@ async (
  * Delete Employee Salary
  */
 
-export const deletePayrollRepository =
-async (
+export const deletePayrollRepository = async (
   id: string
 ) => {
 

@@ -27,7 +27,7 @@ export const createOnboardingService = async (
 };
 
 /**
- * Get All Employees
+ * Get All Employee Onboardings
  */
 
 export const getOnboardingsService = async () => {
@@ -37,7 +37,7 @@ export const getOnboardingsService = async () => {
 };
 
 /**
- * Get Employee By Id
+ * Get Employee Onboarding By Id
  */
 
 export const getOnboardingByIdService = async (

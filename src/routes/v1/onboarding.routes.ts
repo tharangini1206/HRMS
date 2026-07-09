@@ -20,33 +20,56 @@ import {
 const router = express.Router();
 
 /**
+ * ==========================================
+ * Employee Onboarding
+ * ==========================================
+ *
+ * Responsible only for:
+ * - employee_profiles
+ *
+ * Employee account must already exist.
+ */
+
+/**
  * Create Employee Onboarding
  */
 router.post(
   "/",
   authMiddleware,
-  rbac(["super_admin", "hr_admin"]),
+  rbac([
+    "super_admin",
+    "hr_admin"
+  ]),
   validationMiddleware(createOnboardingSchema),
   createOnboarding
 );
 
 /**
- * Get All Onboarded Employees
+ * Get All Employee Onboardings
  */
 router.get(
   "/",
   authMiddleware,
-  rbac(["super_admin", "hr_admin", "manager"]),
+  rbac([
+    "super_admin",
+    "hr_admin",
+    "manager"
+  ]),
   getOnboardings
 );
 
 /**
- * Get Employee Onboarding By Id
+ * Get Employee Onboarding By Profile Public ID
  */
 router.get(
   "/:id",
   authMiddleware,
-  rbac(["super_admin", "hr_admin", "manager", "employee"]),
+  rbac([
+    "super_admin",
+    "hr_admin",
+    "manager",
+    "employee"
+  ]),
   getOnboardingById
 );
 
@@ -56,7 +79,10 @@ router.get(
 router.put(
   "/:id",
   authMiddleware,
-  rbac(["super_admin", "hr_admin"]),
+  rbac([
+    "super_admin",
+    "hr_admin"
+  ]),
   validationMiddleware(updateOnboardingSchema),
   updateOnboarding
 );
@@ -67,7 +93,9 @@ router.put(
 router.delete(
   "/:id",
   authMiddleware,
-  rbac(["super_admin"]),
+  rbac([
+    "super_admin"
+  ]),
   deleteOnboarding
 );
 

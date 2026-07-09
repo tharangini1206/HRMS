@@ -2,9 +2,17 @@ import { z } from "zod";
 
 /**
  * Create Employee Validation
+ * This module creates:
+ * 1. auth.users
+ * 2. public.users
+ *
+ * Employee onboarding data is NOT handled here.
  */
 
 export const createEmployeeSchema = z.object({
+  /**
+   * Users Table
+   */
 
   employee_id: z
     .string()
@@ -12,15 +20,16 @@ export const createEmployeeSchema = z.object({
 
   first_name: z
     .string()
-    .min(2, "First name is required"),
+    .min(2, "First Name is required"),
 
   last_name: z
     .string()
-    .min(1, "Last name is required"),
+    .min(1, "Last Name is required"),
 
   email: z
     .string()
-    .email(),
+    .email("Valid email is required")
+    .transform((email) => email.toLowerCase()),
 
   password: z
     .string()
@@ -87,18 +96,21 @@ export const createEmployeeSchema = z.object({
     .optional(),
 
   status: z
-    .string()
+    .enum([
+      "active",
+      "inactive",
+      "suspended"
+    ])
     .default("active")
-
 });
 
 /**
  * Update Employee Validation
+ * Password cannot be updated here.
  */
 
-export const updateEmployeeSchema =
-  createEmployeeSchema
-    .omit({
-      password: true
-    })
-    .partial();
+export const updateEmployeeSchema = createEmployeeSchema
+  .omit({
+    password: true
+  })
+  .partial();

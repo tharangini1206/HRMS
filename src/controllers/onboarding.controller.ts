@@ -12,8 +12,8 @@ import { sendResponse } from "../utils/response";
 
 /**
  * Create Employee Onboarding
+ * Creates employment details for an existing employee.
  */
-
 export const createOnboarding = async (
   req: Request,
   res: Response,
@@ -22,7 +22,7 @@ export const createOnboarding = async (
 
   try {
 
-    const result =
+    const onboarding =
       await createOnboardingService(
         req.body
       );
@@ -30,8 +30,8 @@ export const createOnboarding = async (
     return sendResponse(
       res,
       201,
-      "Employee onboarded successfully",
-      result
+      "Employee onboarding completed successfully.",
+      onboarding
     );
 
   } catch (error) {
@@ -43,9 +43,8 @@ export const createOnboarding = async (
 };
 
 /**
- * Get All Onboardings
+ * Get All Employee Onboardings
  */
-
 export const getOnboardings = async (
   req: Request,
   res: Response,
@@ -54,14 +53,14 @@ export const getOnboardings = async (
 
   try {
 
-    const result =
+    const onboardings =
       await getOnboardingsService();
 
     return sendResponse(
       res,
       200,
-      "Employees fetched successfully",
-      result
+      "Employee onboardings fetched successfully.",
+      onboardings
     );
 
   } catch (error) {
@@ -73,9 +72,8 @@ export const getOnboardings = async (
 };
 
 /**
- * Get Onboarding By Id
+ * Get Employee Onboarding By Profile Public ID
  */
-
 export const getOnboardingById = async (
   req: Request,
   res: Response,
@@ -84,7 +82,7 @@ export const getOnboardingById = async (
 
   try {
 
-    const result =
+    const onboarding =
       await getOnboardingByIdService(
         String(req.params.id)
       );
@@ -92,8 +90,8 @@ export const getOnboardingById = async (
     return sendResponse(
       res,
       200,
-      "Employee fetched successfully",
-      result
+      "Employee onboarding fetched successfully.",
+      onboarding
     );
 
   } catch (error) {
@@ -105,9 +103,8 @@ export const getOnboardingById = async (
 };
 
 /**
- * Update Onboarding
+ * Update Employee Onboarding
  */
-
 export const updateOnboarding = async (
   req: Request,
   res: Response,
@@ -116,7 +113,7 @@ export const updateOnboarding = async (
 
   try {
 
-    const result =
+    const onboarding =
       await updateOnboardingService(
         String(req.params.id),
         req.body
@@ -125,8 +122,8 @@ export const updateOnboarding = async (
     return sendResponse(
       res,
       200,
-      "Employee updated successfully",
-      result
+      "Employee onboarding updated successfully.",
+      onboarding
     );
 
   } catch (error) {
@@ -138,9 +135,8 @@ export const updateOnboarding = async (
 };
 
 /**
- * Delete Onboarding
+ * Delete Employee Onboarding
  */
-
 export const deleteOnboarding = async (
   req: Request,
   res: Response,
@@ -149,7 +145,7 @@ export const deleteOnboarding = async (
 
   try {
 
-    const result =
+    const onboarding =
       await deleteOnboardingService(
         String(req.params.id)
       );
@@ -157,8 +153,8 @@ export const deleteOnboarding = async (
     return sendResponse(
       res,
       200,
-      "Employee deleted successfully",
-      result
+      "Employee onboarding deleted successfully.",
+      onboarding
     );
 
   } catch (error) {

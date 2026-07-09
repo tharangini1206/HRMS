@@ -64,7 +64,7 @@ export const getSalaryStatement = async (
 };
 
 /**
- * Get Salary History
+ * Get Employee Salary History
  */
 
 export const getSalaryHistory = async (
@@ -107,7 +107,7 @@ export const getSalaryHistory = async (
 };
 
 /**
- * Monthly Payroll Summary
+ * Get Monthly Payroll Summary
  */
 
 export const getMonthlyPayrollSummary = async (

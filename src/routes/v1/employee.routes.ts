@@ -1,8 +1,8 @@
 import express from "express";
 
 import {
-  getEmployees,
   createEmployee,
+  getEmployees,
   getEmployeeById,
   updateEmployee,
   deleteEmployee
@@ -20,43 +20,80 @@ import {
 const router = express.Router();
 
 /**
+ * ==========================================
+ * Employee Management
+ * ==========================================
+ *
+ * Responsible for:
+ * - auth.users
+ * - public.users
+ *
+ * Does NOT manage employee_profiles.
+ * Employee onboarding is handled in a
+ * separate module.
+ */
+
+/**
  * Get All Employees
  */
 router.get(
   "/",
   authMiddleware,
-  rbac(["super_admin", "hr_admin", "manager"]),
+  rbac([
+    "super_admin",
+    "hr_admin",
+    "manager"
+  ]),
   getEmployees
 );
 
 /**
  * Create Employee
+ *
+ * Creates:
+ * - auth.users
+ * - public.users
+ *
+ * Login is available immediately.
  */
 router.post(
   "/",
   authMiddleware,
-  rbac(["super_admin", "hr_admin"]),
+  rbac([
+    "super_admin",
+    "hr_admin"
+  ]),
   validationMiddleware(createEmployeeSchema),
   createEmployee
 );
 
 /**
- * Get Employee By Id
+ * Get Employee By Public ID
  */
 router.get(
   "/:id",
   authMiddleware,
-  rbac(["super_admin", "hr_admin", "manager", "employee"]),
+  rbac([
+    "super_admin",
+    "hr_admin",
+    "manager",
+    "employee"
+  ]),
   getEmployeeById
 );
 
 /**
  * Update Employee
+ *
+ * Updates only public.users.
  */
 router.put(
   "/:id",
   authMiddleware,
-  rbac(["super_admin", "hr_admin"]),
+  rbac([
+    "super_admin",
+    "hr_admin"
+  ]),
   validationMiddleware(updateEmployeeSchema),
   updateEmployee
 );
@@ -67,7 +104,9 @@ router.put(
 router.delete(
   "/:id",
   authMiddleware,
-  rbac(["super_admin"]),
+  rbac([
+    "super_admin"
+  ]),
   deleteEmployee
 );
 

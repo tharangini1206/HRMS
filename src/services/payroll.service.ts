@@ -20,7 +20,9 @@ export const createPayrollService = async (
   body: any
 ) => {
 
-  return await createPayrollRepository(body);
+  return await createPayrollRepository(
+    body
+  );
 
 };
 
@@ -42,7 +44,9 @@ export const getPayrollByIdService = async (
   id: string
 ) => {
 
-  return await getPayrollByIdRepository(id);
+  return await getPayrollByIdRepository(
+    id
+  );
 
 };
 
@@ -51,13 +55,19 @@ export const getPayrollByIdService = async (
  */
 
 export const updatePayrollService = async (
+
   id: string,
+
   body: any
+
 ) => {
 
   return await updatePayrollRepository(
+
     id,
+
     body
+
   );
 
 };
@@ -70,6 +80,8 @@ export const deletePayrollService = async (
   id: string
 ) => {
 
-  return await deletePayrollRepository(id);
+  return await deletePayrollRepository(
+    id
+  );
 
 };

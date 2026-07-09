@@ -1,45 +1,44 @@
 import { z } from "zod";
 
 /**
- * Create Payroll Validation
+ * Create Employee Salary Validation
  */
 
 export const createPayrollSchema = z.object({
 
-  user_id: z.string().uuid(),
+  user_id: z
+    .string()
+    .uuid("Valid user_id is required"),
 
-  annual_ctc: z.number().positive(),
+  annual_ctc: z
+    .number()
+    .positive("Annual CTC must be greater than zero"),
 
-  basic_percentage: z.number().min(0).max(100).optional(),
+  variable_pay_percentage: z
+    .number()
+    .min(0, "Variable Pay cannot be less than 0")
+    .max(100, "Variable Pay cannot exceed 100")
+    .default(0),
 
-  hra_percentage: z.number().min(0).max(100).optional(),
+  annual_income_tax: z
+    .number()
+    .min(0, "Annual Income Tax cannot be negative")
+    .default(0),
 
-  special_allowance: z.number().optional(),
-
-  conveyance: z.number().optional(),
-
-  medical: z.number().optional(),
-
-  pf_employee_percentage: z.number().min(0).max(100).optional(),
-
-  pf_employer_percentage: z.number().min(0).max(100).optional(),
-
-  esi_employee_percentage: z.number().min(0).max(100).optional(),
-
-  esi_employer_percentage: z.number().min(0).max(100).optional(),
-
-  professional_tax_monthly: z.number().optional(),
-
-  gratuity_percentage: z.number().min(0).max(100).optional(),
-
-  bonus_percentage: z.number().min(0).max(100).optional(),
-
-  effective_date: z.string()
+  effective_date: z
+    .string()
+    .refine(
+      (value) => !isNaN(Date.parse(value)),
+      {
+        message: "Effective Date must be a valid date"
+      }
+    )
 
 });
 
 /**
- * Update Payroll Validation
+ * Update Employee Salary Validation
  */
 
-export const updatePayrollSchema = createPayrollSchema.partial();
+export const updatePayrollSchema =
+  createPayrollSchema.partial();

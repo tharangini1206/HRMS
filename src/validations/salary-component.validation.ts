@@ -6,27 +6,59 @@ import { z } from "zod";
 
 export const createSalaryComponentSchema = z.object({
 
-  user_id: z.string().uuid(),
+  user_id: z
+    .string()
+    .uuid("Valid user id is required"),
 
-  component_name: z.string().min(1),
+  component_name: z
+    .string()
+    .min(1, "Component name is required"),
 
   component_type: z.enum([
+
     "earnings",
+
     "deductions",
-    "statutory"
+
+    "tax"
+
   ]),
 
-  amount: z.number().nonnegative(),
+  amount: z
+    .number()
+    .min(0, "Amount cannot be negative"),
 
-  is_percentage: z.boolean().optional(),
+  is_percentage: z
+    .boolean()
+    .default(false),
 
-  percentage_value: z.number().nullable().optional(),
+  percentage_value: z
+    .number()
+    .min(0)
+    .max(100)
+    .optional(),
 
-  calculation_basis: z.string().optional(),
+  calculation_basis: z
+    .string()
+    .optional(),
 
-  effective_date: z.string(),
+  effective_date: z
+    .string()
+    .refine(
 
-  is_active: z.boolean().optional()
+      (value) => !isNaN(Date.parse(value)),
+
+      {
+
+        message: "Invalid effective date"
+
+      }
+
+    ),
+
+  is_active: z
+    .boolean()
+    .optional()
 
 });
 

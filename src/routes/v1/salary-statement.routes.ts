@@ -27,10 +27,15 @@ router.get(
   authMiddleware,
 
   rbac([
+
     "super_admin",
+
     "hr_admin",
+
     "finance",
+
     "employee"
+
   ]),
 
   getSalaryHistory
@@ -38,7 +43,7 @@ router.get(
 );
 
 /**
- * Get Employee Monthly Payroll Summary
+ * Get Monthly Payroll Summary
  */
 
 router.get(
@@ -48,9 +53,13 @@ router.get(
   authMiddleware,
 
   rbac([
+
     "super_admin",
+
     "hr_admin",
+
     "finance"
+
   ]),
 
   getMonthlyPayrollSummary
@@ -68,10 +77,15 @@ router.get(
   authMiddleware,
 
   rbac([
+
     "super_admin",
+
     "hr_admin",
+
     "finance",
+
     "employee"
+
   ]),
 
   getSalaryStatement

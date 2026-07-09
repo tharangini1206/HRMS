@@ -6,9 +6,23 @@ import { z } from "zod";
 
 export const generatePayrollSchema = z.object({
 
-  user_id: z.string().uuid(),
+  user_id: z.string().uuid({
 
-  month_year: z.string()
+    message: "Valid user_id is required"
+
+  }),
+
+  month_year: z.string().refine(
+
+    (value) => !isNaN(Date.parse(value)),
+
+    {
+
+      message: "Invalid month_year"
+
+    }
+
+  )
 
 });
 
@@ -18,6 +32,16 @@ export const generatePayrollSchema = z.object({
 
 export const markPayrollPaidSchema = z.object({
 
-  payment_id: z.string().min(1)
+  payment_id: z.string().min(
+
+    1,
+
+    {
+
+      message: "Payment ID is required"
+
+    }
+
+  )
 
 });

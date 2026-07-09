@@ -13,7 +13,42 @@ export const getSalaryStatementRepository = async (
 ) => {
 
   /**
-   * Get Payroll
+   * Employee
+   */
+
+  const { data: employee, error: employeeError } =
+    await supabase
+      .from("users")
+      .select("*")
+      .eq("auth_user_id", userId)
+      .single();
+
+  if (employeeError) {
+
+    throw new Error(employeeError.message);
+
+  }
+
+  /**
+   * Employee Salary Structure
+   */
+
+  const { data: salary, error: salaryError } =
+    await supabase
+      .from("employee_salary")
+      .select("*")
+      .eq("user_id", userId)
+      .eq("is_active", true)
+      .single();
+
+  if (salaryError) {
+
+    throw new Error(salaryError.message);
+
+  }
+
+  /**
+   * Payroll
    */
 
   const { data: payroll, error: payrollError } =
@@ -31,25 +66,36 @@ export const getSalaryStatementRepository = async (
   }
 
   /**
-   * Get Employee
+   * Custom Components
    */
 
-  const { data: employee, error: employeeError } =
+  const {
+
+    data: salaryComponents,
+
+    error: componentError
+
+  } =
     await supabase
-      .from("users")
+      .from("salary_components")
       .select("*")
-      .eq("auth_user_id", userId)
-      .single();
+      .eq("user_id", userId)
+      .eq("is_active", true)
+      .lte("effective_date", monthYear);
 
-  if (employeeError) {
+  if (componentError) {
 
-    throw new Error(employeeError.message);
+    throw new Error(componentError.message);
 
   }
 
   return {
 
     employee,
+
+    salary,
+
+    salaryComponents,
 
     payroll
 
@@ -58,7 +104,7 @@ export const getSalaryStatementRepository = async (
 };
 
 /**
- * Get Employee Salary History
+ * Get Salary History
  */
 
 export const getSalaryHistoryRepository = async (
@@ -70,7 +116,51 @@ export const getSalaryHistoryRepository = async (
   const { data, error } =
     await supabase
       .from("payroll")
-      .select("*")
+      .select(`
+
+        public_id,
+
+        month_year,
+
+        gross_pay,
+
+        total_earnings,
+
+        total_deductions,
+
+        net_pay,
+
+        basic,
+
+        hra,
+
+        special_allowance,
+
+        bonus,
+
+        gratuity,
+
+        custom_earnings,
+
+        custom_deductions,
+
+        pf_employee,
+
+        pf_employer,
+
+        professional_tax,
+
+        income_tax,
+
+        lop_deduction,
+
+        status,
+
+        is_paid,
+
+        paid_at
+
+      `)
       .eq("user_id", userId)
       .order("month_year", {
 

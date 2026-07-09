@@ -2,6 +2,8 @@ import {
 
   getEmployeeSalaryRepository,
 
+  getStatutoryConfigRepository,
+
   getSalaryComponentsRepository,
 
   checkPayrollExistsRepository,
@@ -21,7 +23,6 @@ import {
   getPayrollAttendanceRepository
 
 } from "../repositories/payroll-generation.repository";
-
 
 /**
  * Generate Payroll
@@ -59,7 +60,7 @@ export const generatePayrollService = async (
   }
 
   /**
-   * Get Employee Salary
+   * Employee Salary
    */
 
   const employeeSalary =
@@ -70,154 +71,297 @@ export const generatePayrollService = async (
     );
 
   /**
-   * Get Salary Components
+   * Statutory Configuration
    */
 
-  const salaryComponents =
-    await getSalaryComponentsRepository(
-
-      body.user_id
-
-    );
-
-  
-
-  
-
-  /**
-   * Monthly Salary
-   */
-
-  const monthlySalary =
-    Number(employeeSalary.monthly_ctc);
-
-
-    /**
- * Attendance
- */
-
-        const month =
-        new Date(body.month_year).getMonth() + 1;
-
-        const year =
-        new Date(body.month_year).getFullYear();
-
-        const attendance =
-        await getPayrollAttendanceRepository(
-
-        body.user_id,
-
-        month,
-
-        year
-
-        );
-
-        const workingDays =
-        attendance.workingDays;
-
-        const presentDays =
-        attendance.presentDays;
-
-        const absentDays =
-        attendance.absentDays;
-
-        const halfDays =
-        attendance.halfDays;
-
-  /**
-   * Earnings
-   */
-
-  const basic =
-    (monthlySalary *
-      Number(employeeSalary.basic_percentage)) / 100;
-
-  const hra =
-    (monthlySalary *
-      Number(employeeSalary.hra_percentage)) / 100;
-
-  const specialAllowance =
-    Number(employeeSalary.special_allowance);
-
-  const conveyance =
-    Number(employeeSalary.conveyance);
-
-  const medical =
-    Number(employeeSalary.medical);
-
-  let totalEarnings =
-    basic +
-    hra +
-    specialAllowance +
-    conveyance +
-    medical;
-
-  /**
-   * Deductions
-   */
-
-  const pfEmployee =
-    (basic *
-      Number(employeeSalary.pf_employee_percentage)) / 100;
-
-  const pfEmployer =
-    (basic *
-      Number(employeeSalary.pf_employer_percentage)) / 100;
-
-  const esiEmployee =
-    (monthlySalary *
-      Number(employeeSalary.esi_employee_percentage)) / 100;
-
-  const esiEmployer =
-    (monthlySalary *
-      Number(employeeSalary.esi_employer_percentage)) / 100;
-
-  const professionalTax =
-    Number(employeeSalary.professional_tax_monthly);
-
-    /**
- * LOP Calculation
- */
-
-const perDaySalary =
-workingDays > 0
-? monthlySalary / workingDays
-: 0;
-
-const lopDeduction =
-
-(absentDays * perDaySalary)
-
-+
-
-((halfDays * perDaySalary) / 2);
-
-  const tdsDeduction = 0;
-
-  let otherDeductions = 0;
+  const statutoryConfig =
+    await getStatutoryConfigRepository();
 
   /**
    * Salary Components
    */
 
-  salaryComponents.forEach((component: any) => {
+  const salaryComponents =
+    await getSalaryComponentsRepository(
 
-    if (component.component_type === "earnings") {
+      body.user_id,
 
-      if (component.component_name !== "Basic Salary" &&
-          component.component_name !== "HRA") {
+      body.month_year
 
-        if (component.is_percentage) {
+    );
 
-          totalEarnings +=
-            (monthlySalary *
-              Number(component.percentage_value)) / 100;
+  /**
+   * Attendance
+   */
 
-        } else {
+  const month =
+    new Date(body.month_year).getMonth() + 1;
 
-          totalEarnings +=
-            Number(component.amount);
+  const year =
+    new Date(body.month_year).getFullYear();
+
+  const attendance =
+    await getPayrollAttendanceRepository(
+
+      body.user_id,
+
+      month,
+
+      year
+
+    );
+
+  const workingDays =
+    attendance.workingDays;
+
+  const presentDays =
+    attendance.presentDays;
+
+  const absentDays =
+    attendance.absentDays;
+
+  const halfDays =
+    attendance.halfDays;
+
+  /**
+   * Salary
+   */
+
+  const fixedGross =
+    Number(employeeSalary.fixed_gross_monthly);
+
+  const dailyGross =
+    Number(employeeSalary.daily_gross);
+
+  const annualIncomeTax =
+    Number(employeeSalary.annual_income_tax);
+
+  /**
+   * Percentages
+   */
+
+  const basicPercentage =
+    Number(statutoryConfig.basic_percentage);
+
+  const hraPercentage =
+    Number(statutoryConfig.hra_percentage);
+
+  const specialAllowancePercentage =
+    Number(
+
+      statutoryConfig.special_allowance_percentage
+
+    );
+
+  const bonusPercentage =
+    Number(statutoryConfig.bonus_percentage);
+
+  const gratuityPercentage =
+    Number(statutoryConfig.gratuity_percentage);
+
+  const pfEmployeePercentage =
+    Number(
+
+      statutoryConfig.pf_employee_percentage
+
+    );
+
+  const pfEmployerPercentage =
+    Number(
+
+      statutoryConfig.pf_employer_percentage
+
+    );
+
+  const esiEmployeePercentage =
+    Number(
+
+      statutoryConfig.esi_employee_percentage
+
+    );
+
+  const esiEmployerPercentage =
+    Number(
+
+      statutoryConfig.esi_employer_percentage
+
+    );
+
+  const professionalTax =
+    Number(
+
+      statutoryConfig.professional_tax
+
+    );
+    /**
+   * Earnings
+   */
+
+  const basic =
+    fixedGross *
+    (basicPercentage / 100);
+
+  const hra =
+    basic *
+    (hraPercentage / 100);
+
+  const specialAllowance =
+    basic *
+    (specialAllowancePercentage / 100);
+
+  const bonus =
+    fixedGross *
+    (bonusPercentage / 100);
+
+  const gratuity =
+    fixedGross *
+    (gratuityPercentage / 100);
+
+  /**
+   * Custom Components
+   */
+
+  let customEarnings = 0;
+
+  let customDeductions = 0;
+
+  salaryComponents.forEach(
+
+    (component: any) => {
+
+      /**
+       * Earnings
+       */
+
+      if (
+
+        component.component_type === "earnings"
+
+      ) {
+
+        if (
+
+          component.is_percentage
+
+        ) {
+
+          customEarnings +=
+
+            fixedGross *
+
+            (
+
+              Number(
+
+                component.percentage_value
+
+              ) / 100
+
+            );
+
+        }
+
+        else {
+
+          customEarnings +=
+
+            Number(
+
+              component.amount
+
+            );
+
+        }
+
+      }
+
+      /**
+       * Statutory
+       */
+
+      if (
+
+        component.component_type === "statutory"
+
+      ) {
+
+        if (
+
+          component.is_percentage
+
+        ) {
+
+          customEarnings +=
+
+            fixedGross *
+
+            (
+
+              Number(
+
+                component.percentage_value
+
+              ) / 100
+
+            );
+
+        }
+
+        else {
+
+          customEarnings +=
+
+            Number(
+
+              component.amount
+
+            );
+
+        }
+
+      }
+
+      /**
+       * Deductions
+       */
+
+      if (
+
+        component.component_type === "deductions"
+
+      ) {
+
+        if (
+
+          component.is_percentage
+
+        ) {
+
+          customDeductions +=
+
+            fixedGross *
+
+            (
+
+              Number(
+
+                component.percentage_value
+
+              ) / 100
+
+            );
+
+        }
+
+        else {
+
+          customDeductions +=
+
+            Number(
+
+              component.amount
+
+            );
 
         }
 
@@ -225,56 +369,129 @@ const lopDeduction =
 
     }
 
-    if (component.component_type === "deductions") {
+  );
 
-      if (component.is_percentage) {
+  /**
+   * Total Earnings
+   */
 
-        otherDeductions +=
-          (monthlySalary *
-            Number(component.percentage_value)) / 100;
+  const totalEarnings =
 
-      } else {
+    basic +
 
-        otherDeductions +=
-          Number(component.amount);
+    hra +
 
-      }
+    specialAllowance +
 
-    }
+    bonus +
 
-    /**
-     * Ignore Statutory Components
-     * Already calculated from employee_salary
-     */
+    gratuity +
 
-  });
+    customEarnings;
+
+      /**
+   * PF
+   */
+
+  const pfEmployee =
+    basic *
+    (pfEmployeePercentage / 100);
+
+  const pfEmployer =
+    basic *
+    (pfEmployerPercentage / 100);
+
+  /**
+   * ESI
+   */
+
+  const esiEmployee =
+    basic *
+    (esiEmployeePercentage / 100);
+
+  const esiEmployer =
+    basic *
+    (esiEmployerPercentage / 100);
+
+  /**
+   * Income Tax
+   */
+
+  const incomeTax =
+    annualIncomeTax / 12;
+
+  /**
+   * LOP
+   */
+
+  const lopDays =
+
+    absentDays +
+
+    (halfDays * 0.5);
+
+  const lopDeduction =
+
+    lopDays *
+
+    dailyGross;
+
+  /**
+   * TDS
+   */
+
+  const tdsDeduction = 0;
+
+  /**
+   * Other Deductions
+   */
+
+  const otherDeductions = 0;
 
   /**
    * Total Deductions
    */
 
   const totalDeductions =
+
     pfEmployee +
+
+    pfEmployer +
+
     esiEmployee +
+
+    esiEmployer +
+
     professionalTax +
+
+    incomeTax +
+
+    customDeductions +
+
     tdsDeduction +
-    lopDeduction +
-    otherDeductions;
+
+    otherDeductions +
+
+    lopDeduction;
 
   /**
-   * Gross & Net
+   * Gross Pay
    */
 
   const grossPay =
     totalEarnings;
 
+  /**
+   * Net Pay
+   */
+
   const netPay =
+
     grossPay -
+
     totalDeductions;
 
-  console.log("Processed By :", processedBy);
-
-  /**
+      /**
    * Save Payroll
    */
 
@@ -284,17 +501,17 @@ const lopDeduction =
 
     month_year: body.month_year,
 
+    fixed_gross: fixedGross,
+
     basic,
 
     hra,
 
     special_allowance: specialAllowance,
 
-    conveyance,
+    bonus,
 
-    medical,
-
-    total_earnings: totalEarnings,
+    gratuity,
 
     pf_employee: pfEmployee,
 
@@ -306,11 +523,21 @@ const lopDeduction =
 
     professional_tax: professionalTax,
 
+    income_tax: incomeTax,
+
     tds_deduction: tdsDeduction,
 
     lop_deduction: lopDeduction,
 
     other_deductions: otherDeductions,
+
+    custom_earnings: customEarnings,
+
+    custom_deductions: customDeductions,
+
+    total_earnings: totalEarnings,
+
+    total_deductions: totalDeductions,
 
     gross_pay: grossPay,
 
@@ -321,6 +548,8 @@ const lopDeduction =
     present_days: presentDays,
 
     absent_days: absentDays,
+
+    lop_days: lopDays,
 
     status: "processed",
 
@@ -350,7 +579,9 @@ export const getPayrollGenerationByIdService = async (
   id: string
 ) => {
 
-  return await getPayrollGenerationByIdRepository(id);
+  return await getPayrollGenerationByIdRepository(
+    id
+  );
 
 };
 

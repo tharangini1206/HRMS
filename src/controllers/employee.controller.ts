@@ -12,6 +12,11 @@ import { sendResponse } from "../utils/response";
 
 /**
  * Create Employee
+ * Creates:
+ * 1. auth.users
+ * 2. public.users
+ *
+ * Employee onboarding is handled separately.
  */
 export const createEmployee = async (
   req: Request,
@@ -21,16 +26,14 @@ export const createEmployee = async (
 
   try {
 
-    const result =
-      await createEmployeeService(
-        req.body
-      );
+    const employee =
+      await createEmployeeService(req.body);
 
     return sendResponse(
       res,
       201,
-      "Employee created successfully",
-      result
+      "Employee created successfully.",
+      employee
     );
 
   } catch (error) {
@@ -52,14 +55,14 @@ export const getEmployees = async (
 
   try {
 
-    const result =
+    const employees =
       await getEmployeesService();
 
     return sendResponse(
       res,
       200,
-      "Employees fetched successfully",
-      result
+      "Employees fetched successfully.",
+      employees
     );
 
   } catch (error) {
@@ -71,7 +74,7 @@ export const getEmployees = async (
 };
 
 /**
- * Get Employee By Id
+ * Get Employee By Public ID
  */
 export const getEmployeeById = async (
   req: Request,
@@ -81,7 +84,7 @@ export const getEmployeeById = async (
 
   try {
 
-    const result =
+    const employee =
       await getEmployeeByIdService(
         String(req.params.id)
       );
@@ -89,8 +92,8 @@ export const getEmployeeById = async (
     return sendResponse(
       res,
       200,
-      "Employee fetched successfully",
-      result
+      "Employee fetched successfully.",
+      employee
     );
 
   } catch (error) {
@@ -103,6 +106,10 @@ export const getEmployeeById = async (
 
 /**
  * Update Employee
+ * Updates only public.users.
+ *
+ * Employment information is updated
+ * through Employee Onboarding module.
  */
 export const updateEmployee = async (
   req: Request,
@@ -112,7 +119,7 @@ export const updateEmployee = async (
 
   try {
 
-    const result =
+    const employee =
       await updateEmployeeService(
         String(req.params.id),
         req.body
@@ -121,8 +128,8 @@ export const updateEmployee = async (
     return sendResponse(
       res,
       200,
-      "Employee updated successfully",
-      result
+      "Employee updated successfully.",
+      employee
     );
 
   } catch (error) {
@@ -134,7 +141,7 @@ export const updateEmployee = async (
 };
 
 /**
- * Delete Employee
+ * Soft Delete Employee
  */
 export const deleteEmployee = async (
   req: Request,
@@ -144,7 +151,7 @@ export const deleteEmployee = async (
 
   try {
 
-    const result =
+    const employee =
       await deleteEmployeeService(
         String(req.params.id)
       );
@@ -152,8 +159,8 @@ export const deleteEmployee = async (
     return sendResponse(
       res,
       200,
-      "Employee deleted successfully",
-      result
+      "Employee deleted successfully.",
+      employee
     );
 
   } catch (error) {

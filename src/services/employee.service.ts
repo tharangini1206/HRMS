@@ -9,7 +9,6 @@ import {
 /**
  * Create Employee
  */
-
 export const createEmployeeService = async (
   body: any
 ) => {
@@ -21,7 +20,6 @@ export const createEmployeeService = async (
 /**
  * Get All Employees
  */
-
 export const getEmployeesService = async () => {
 
   return await getEmployeesRepository();
@@ -31,7 +29,6 @@ export const getEmployeesService = async () => {
 /**
  * Get Employee By Id
  */
-
 export const getEmployeeByIdService = async (
   id: string
 ) => {
@@ -43,7 +40,6 @@ export const getEmployeeByIdService = async (
 /**
  * Update Employee
  */
-
 export const updateEmployeeService = async (
   id: string,
   body: any
@@ -59,7 +55,6 @@ export const updateEmployeeService = async (
 /**
  * Delete Employee
  */
-
 export const deleteEmployeeService = async (
   id: string
 ) => {

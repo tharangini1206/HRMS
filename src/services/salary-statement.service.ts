@@ -70,111 +70,271 @@ export const getMonthlyPayrollSummaryService = async (
     totalEmployees:
       payrolls.length,
 
-    grossPayroll:
+    totalGrossPayroll:
+
       payrolls.reduce(
 
         (sum: number, payroll: any) =>
 
-          sum + Number(payroll.gross_pay),
+          sum + Number(payroll.gross_pay ?? 0),
+
+        0
+
+      ),
+
+    totalNetPayroll:
+
+      payrolls.reduce(
+
+        (sum: number, payroll: any) =>
+
+          sum + Number(payroll.net_pay ?? 0),
+
+        0
+
+      ),
+
+    totalFixedGross:
+
+      payrolls.reduce(
+
+        (sum: number, payroll: any) =>
+
+          sum + Number(payroll.fixed_gross ?? 0),
+
+        0
+
+      ),
+
+    totalBasic:
+
+      payrolls.reduce(
+
+        (sum: number, payroll: any) =>
+
+          sum + Number(payroll.basic ?? 0),
+
+        0
+
+      ),
+
+    totalHRA:
+
+      payrolls.reduce(
+
+        (sum: number, payroll: any) =>
+
+          sum + Number(payroll.hra ?? 0),
+
+        0
+
+      ),
+
+    totalSpecialAllowance:
+
+      payrolls.reduce(
+
+        (sum: number, payroll: any) =>
+
+          sum +
+
+          Number(
+
+            payroll.special_allowance ?? 0
+
+          ),
+
+        0
+
+      ),
+
+    totalBonus:
+
+      payrolls.reduce(
+
+        (sum: number, payroll: any) =>
+
+          sum + Number(payroll.bonus ?? 0),
+
+        0
+
+      ),
+
+    totalGratuity:
+
+      payrolls.reduce(
+
+        (sum: number, payroll: any) =>
+
+          sum +
+
+          Number(
+
+            payroll.gratuity ?? 0
+
+          ),
+
+        0
+
+      ),
+
+    totalCustomEarnings:
+
+      payrolls.reduce(
+
+        (sum: number, payroll: any) =>
+
+          sum +
+
+          Number(
+
+            payroll.custom_earnings ?? 0
+
+          ),
 
         0
 
       ),
 
     totalEarnings:
+
       payrolls.reduce(
 
         (sum: number, payroll: any) =>
 
-          sum + Number(payroll.total_earnings),
+          sum +
 
-        0
+          Number(
 
-      ),
+            payroll.total_earnings ?? 0
 
-    totalDeductions:
-      payrolls.reduce(
-
-        (sum: number, payroll: any) =>
-
-          sum + Number(payroll.total_deductions),
-
-        0
-
-      ),
-
-    totalNetPay:
-      payrolls.reduce(
-
-        (sum: number, payroll: any) =>
-
-          sum + Number(payroll.net_pay),
+          ),
 
         0
 
       ),
 
     totalPFEmployee:
+
       payrolls.reduce(
 
         (sum: number, payroll: any) =>
 
-          sum + Number(payroll.pf_employee),
+          sum +
+
+          Number(
+
+            payroll.pf_employee ?? 0
+
+          ),
 
         0
 
       ),
 
     totalPFEmployer:
+
       payrolls.reduce(
 
         (sum: number, payroll: any) =>
 
-          sum + Number(payroll.pf_employer),
+          sum +
 
-        0
+          Number(
 
-      ),
+            payroll.pf_employer ?? 0
 
-    totalESIEmployee:
-      payrolls.reduce(
-
-        (sum: number, payroll: any) =>
-
-          sum + Number(payroll.esi_employee),
-
-        0
-
-      ),
-
-    totalESIEmployer:
-      payrolls.reduce(
-
-        (sum: number, payroll: any) =>
-
-          sum + Number(payroll.esi_employer),
+          ),
 
         0
 
       ),
 
     totalProfessionalTax:
+
       payrolls.reduce(
 
         (sum: number, payroll: any) =>
 
-          sum + Number(payroll.professional_tax),
+          sum +
+
+          Number(
+
+            payroll.professional_tax ?? 0
+
+          ),
 
         0
 
       ),
 
-    totalLOP:
+    totalIncomeTax:
+
       payrolls.reduce(
 
         (sum: number, payroll: any) =>
 
-          sum + Number(payroll.lop_deduction),
+          sum +
+
+          Number(
+
+            payroll.income_tax ?? 0
+
+          ),
+
+        0
+
+      ),
+
+    totalCustomDeductions:
+
+      payrolls.reduce(
+
+        (sum: number, payroll: any) =>
+
+          sum +
+
+          Number(
+
+            payroll.custom_deductions ?? 0
+
+          ),
+
+        0
+
+      ),
+
+    totalLOPDeduction:
+
+      payrolls.reduce(
+
+        (sum: number, payroll: any) =>
+
+          sum +
+
+          Number(
+
+            payroll.lop_deduction ?? 0
+
+          ),
+
+        0
+
+      ),
+
+    totalDeductions:
+
+      payrolls.reduce(
+
+        (sum: number, payroll: any) =>
+
+          sum +
+
+          Number(
+
+            payroll.total_deductions ?? 0
+
+          ),
 
         0
 
