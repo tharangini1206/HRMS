@@ -20,117 +20,55 @@ body{
 }
 
 .header{
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
     border-bottom:2px solid #ff4d4f;
-
     padding-bottom:20px;
-
-}
-
-.logo{
-
-    font-size:32px;
-
-    font-weight:bold;
-
-    color:#ff4d4f;
-
 }
 
 .company{
-
     font-size:28px;
-
     font-weight:bold;
-
-    color:#000;
-
 }
 
 .title{
-
-    margin-top:20px;
-
+    margin-top:25px;
     text-align:center;
-
-    font-size:26px;
-
+    font-size:24px;
     font-weight:bold;
-
-}
-
-.employee{
-
-    margin-top:30px;
-
-}
-
-.employee table{
-
-    width:100%;
-
-}
-
-.employee td{
-
-    padding:8px;
-
-}
-
-.section{
-
-    margin-top:30px;
-
 }
 
 table{
-
     width:100%;
-
     border-collapse:collapse;
-
-}
-
-th{
-
-    background:#ff4d4f;
-
-    color:white;
-
-    padding:10px;
-
 }
 
 td{
-
+    padding:8px;
     border:1px solid #ddd;
+}
 
+th{
     padding:10px;
+    background:#ff4d4f;
+    color:white;
+    border:1px solid #ddd;
+}
 
+.section{
+    margin-top:25px;
 }
 
 .summary{
-
-    margin-top:25px;
-
+    margin-top:30px;
 }
 
 .footer{
-
     margin-top:50px;
-
     text-align:center;
-
-    color:#888;
-
     font-size:12px;
-
+    color:#777;
 }
 
 </style>
@@ -143,11 +81,7 @@ td{
 
 <div>
 
-<div class="company">
-
-COFOMO <span style="color:#ff4d4f;">TECH</span>
-
-</div>
+<h2>COFOMO TECH</h2>
 
 <div>
 
@@ -159,78 +93,49 @@ Employee Payroll Management System
 
 <div>
 
-<img
-src="https://www.cofomotech.com/assets/images/Logo.jpeg"
-width="180"
-/>
+<h3>PAYSLIP</h3>
 
 </div>
 
 </div>
 
-<div class="title">
-
-PAYSLIP
-
-</div>
-
-<div class="employee">
+<div class="section">
 
 <table>
 
 <tr>
 
-<td>
+<td><b>Employee ID</b></td>
 
-<b>Employee ID</b>
+<td>${employee.employee_id}</td>
 
-</td>
+<td><b>Month</b></td>
 
-<td>
-
-${employee.public_id ?? "-"}
-
-</td>
-
-<td>
-
-<b>Month</b>
-
-</td>
-
-<td>
-
-${payroll.month_year}
-
-</td>
+<td>${payroll.month_year}</td>
 
 </tr>
 
 <tr>
 
-<td>
+<td><b>Employee Name</b></td>
 
-<b>Name</b>
+<td>${employee.first_name} ${employee.last_name}</td>
 
-</td>
+<td><b>Status</b></td>
 
-<td>
+<td>${payroll.status}</td>
 
-${employee.full_name ?? "-"}
+</tr>
 
-</td>
+<tr>
 
-<td>
+<td><b>Email</b></td>
 
-<b>Status</b>
+<td>${employee.email}</td>
 
-</td>
+<td><b>Phone</b></td>
 
-<td>
-
-${payroll.status}
-
-</td>
+<td>${employee.phone ?? "-"}</td>
 
 </tr>
 
@@ -244,13 +149,13 @@ ${payroll.status}
 
 <tr>
 
-<th>EARNINGS</th>
+<th>Earnings</th>
 
-<th>AMOUNT</th>
+<th>Amount</th>
 
-<th>DEDUCTIONS</th>
+<th>Deductions</th>
 
-<th>AMOUNT</th>
+<th>Amount</th>
 
 </tr>
 
@@ -292,9 +197,21 @@ ${payroll.status}
 
 <tr>
 
-<td>Conveyance</td>
+<td>Bonus</td>
 
-<td>${payroll.conveyance}</td>
+<td>${payroll.bonus}</td>
+
+<td>Income Tax</td>
+
+<td>${payroll.income_tax}</td>
+
+</tr>
+
+<tr>
+
+<td>Gratuity</td>
+
+<td>${payroll.gratuity}</td>
 
 <td>TDS</td>
 
@@ -304,11 +221,11 @@ ${payroll.status}
 
 <tr>
 
-<td>Medical</td>
+<td>Custom Earnings</td>
 
-<td>${payroll.medical}</td>
+<td>${payroll.custom_earnings}</td>
 
-<td>LOP</td>
+<td>LOP Deduction</td>
 
 <td>${payroll.lop_deduction}</td>
 
@@ -316,7 +233,21 @@ ${payroll.status}
 
 <tr>
 
-<td colspan="2"></td>
+<td></td>
+
+<td></td>
+
+<td>Custom Deductions</td>
+
+<td>${payroll.custom_deductions}</td>
+
+</tr>
+
+<tr>
+
+<td></td>
+
+<td></td>
 
 <td>Other Deductions</td>
 
@@ -328,19 +259,43 @@ ${payroll.status}
 
 <th>Total Earnings</th>
 
-<th>
-
-${payroll.total_earnings}
-
-</th>
+<th>${payroll.total_earnings}</th>
 
 <th>Total Deductions</th>
 
-<th>
+<th>${payroll.total_deductions}</th>
 
-${payroll.total_deductions}
+</tr>
 
-</th>
+</table>
+
+</div>
+
+<div class="section">
+
+<table>
+
+<tr>
+
+<td><b>Working Days</b></td>
+
+<td>${payroll.working_days}</td>
+
+<td><b>Present Days</b></td>
+
+<td>${payroll.present_days}</td>
+
+</tr>
+
+<tr>
+
+<td><b>Absent Days</b></td>
+
+<td>${payroll.absent_days}</td>
+
+<td><b>LOP Days</b></td>
+
+<td>${payroll.lop_days}</td>
 
 </tr>
 
@@ -354,27 +309,15 @@ ${payroll.total_deductions}
 
 <tr>
 
-<td>
+<td><b>Gross Pay</b></td>
 
-<b>Gross Pay</b>
-
-</td>
-
-<td>
-
-${payroll.gross_pay}
-
-</td>
+<td>${payroll.gross_pay}</td>
 
 </tr>
 
 <tr>
 
-<td>
-
-<b>Net Pay</b>
-
-</td>
+<td><b>Net Pay</b></td>
 
 <td>
 
@@ -398,7 +341,7 @@ This is a system generated payslip.
 
 <br><br>
 
-COFOMO TECH HRMS
+© COFOMO TECH HRMS
 
 </div>
 

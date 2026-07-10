@@ -1,18 +1,13 @@
 import fs from "fs";
 
 import {
-
   getPayrollByIdRepository,
-
   getPayslipRepository,
-
   createPayslipRepository,
-
   getEmployeePayslipsRepository,
-
-  getPayslipByIdRepository
-  
-
+  getPayslipByIdRepository,
+  getAllPayslipsRepository,
+  deletePayslipRepository
 } from "../repositories/payslip.repository";
 
 import { supabase } from "../config/supabase";
@@ -22,23 +17,20 @@ import { generatePayslipTemplate } from "../templates/payslip.template";
 import { generatePDF } from "../utils/pdf-generator";
 
 import {
-
   uploadPayslipToStorage,
-
-  getPayslipSignedUrl
-
+  getPayslipSignedUrl,
+  deletePayslipFromStorage
 } from "../utils/supabase-storage";
 
 /**
+ * ==========================================
  * Generate Payslip
+ * ==========================================
  */
 
 export const generatePayslipService = async (
-
   payrollId: string,
-
   generatedBy: string
-
 ) => {
 
   /**
@@ -47,63 +39,55 @@ export const generatePayslipService = async (
 
   const payroll =
     await getPayrollByIdRepository(
-
       payrollId
-
     );
-
-  /**
-   * Payroll Exists
-   */
 
   if (!payroll) {
 
     throw new Error(
-
       "Payroll not found."
-
     );
 
   }
 
   /**
-   * Employee
+   * Payroll Status Check
    */
 
-  const {
-
-    data: employee,
-
-    error: employeeError
-
-  } = await supabase
-
-    .from("users")
-
-    .select("*")
-
-    .eq(
-
-      "auth_user_id",
-
-      payroll.user_id
-
-    )
-
-    .single();
-
   if (
-
-    employeeError ||
-
-    !employee
-
+    payroll.status  !== "approved" &&
+    payroll.status  !== "paid"
   ) {
 
     throw new Error(
+      "Payslip can be generated only for approved or paid payroll."
+    );
 
+  }
+
+  /**
+   * Get Employee
+   */
+
+  const {
+    data: employee,
+    error: employeeError
+  } = await supabase
+    .from("users")
+    .select("*")
+    .eq(
+      "auth_user_id",
+      payroll.user_id
+    )
+    .single();
+
+  if (
+    employeeError ||
+    !employee
+  ) {
+
+    throw new Error(
       "Employee not found."
-
     );
 
   }
@@ -114,55 +98,43 @@ export const generatePayslipService = async (
 
   const existingPayslip =
     await getPayslipRepository(
-
       payroll.user_id,
-
       payroll.month_year
-
     );
 
-  if (
-
-    existingPayslip
-
-  ) {
+  if (existingPayslip) {
 
     throw new Error(
-
       "Payslip already generated."
-
     );
 
   }
 
   /**
-   * HTML
+   * HTML Template
    */
 
   const html =
     generatePayslipTemplate(
-
       payroll,
-
       employee
-
     );
 
   /**
-   * PDF
+   * File Name
    */
 
   const fileName =
+    `${employee.employee_id}_${payroll.month_year}_${Date.now()}`;
 
-    `${employee.employee_id}_${payroll.month_year}`;
+  /**
+   * Generate PDF
+   */
 
   const pdfPath =
     await generatePDF(
-
       html,
-
       fileName
-
     );
 
   /**
@@ -170,24 +142,27 @@ export const generatePayslipService = async (
    */
 
   const fileSize =
-    fs.statSync(
-
-      pdfPath
-
-    ).size;
+    fs.statSync(pdfPath).size;
 
   /**
-   * Upload Storage
+   * Upload To Storage
    */
 
   const storagePath =
     await uploadPayslipToStorage(
-
       pdfPath,
-
       fileName
-
     );
+
+  /**
+   * Delete Local PDF
+   */
+
+  if (fs.existsSync(pdfPath)) {
+
+    fs.unlinkSync(pdfPath);
+
+  }
 
   /**
    * Save Payslip
@@ -197,44 +172,38 @@ export const generatePayslipService = async (
     await createPayslipRepository({
 
       user_id:
-
         payroll.user_id,
 
-      month_year:
+      payroll_id:
+        payroll.id,
 
+      month_year:
         payroll.month_year,
 
       file_url:
-
         storagePath,
 
       file_size:
-
         fileSize,
 
       mime_type:
-
         "application/pdf",
 
       generated_by:
-
         generatedBy,
 
       generated_at:
-
         new Date().toISOString()
 
     });
 
   /**
-   * Signed URL
+   * Generate Signed URL
    */
 
   const signedUrl =
     await getPayslipSignedUrl(
-
       storagePath
-
     );
 
   return {
@@ -242,7 +211,6 @@ export const generatePayslipService = async (
     payslip,
 
     download_url:
-
       signedUrl
 
   };
@@ -250,31 +218,29 @@ export const generatePayslipService = async (
 };
 
 /**
+ * ==========================================
  * Get Employee Payslips
+ * ==========================================
  */
 
 export const getEmployeePayslipsService = async (
-
   userId: string
-
 ) => {
 
   return await getEmployeePayslipsRepository(
-
     userId
-
   );
 
 };
 
 /**
+ * ==========================================
  * Download Payslip
+ * ==========================================
  */
 
 export const getPayslipDownloadService = async (
-
   payslipId: string
-
 ) => {
 
   /**
@@ -283,17 +249,13 @@ export const getPayslipDownloadService = async (
 
   const payslip =
     await getPayslipByIdRepository(
-
       payslipId
-
     );
 
   if (!payslip) {
 
     throw new Error(
-
       "Payslip not found."
-
     );
 
   }
@@ -304,15 +266,98 @@ export const getPayslipDownloadService = async (
 
   const signedUrl =
     await getPayslipSignedUrl(
-
       payslip.file_url
-
     );
 
   return {
 
-    download_url: signedUrl
+    download_url:
+      signedUrl
 
   };
+
+};
+
+/**
+ * ==========================================
+ * Get All Payslips
+ * ==========================================
+ */
+
+export const getAllPayslipsService = async () => {
+
+  return await getAllPayslipsRepository();
+
+};
+
+/**
+ * ==========================================
+ * Get Payslip By Id
+ * ==========================================
+ */
+
+export const getPayslipByIdService = async (
+  id: string
+) => {
+
+  const payslip =
+    await getPayslipByIdRepository(
+      id
+    );
+
+  if (!payslip) {
+
+    throw new Error(
+      "Payslip not found."
+    );
+
+  }
+
+  return payslip;
+
+};
+
+/**
+ * ==========================================
+ * Delete Payslip
+ * ==========================================
+ */
+
+export const deletePayslipService = async (
+  id: string
+) => {
+
+  /**
+   * Get Payslip
+   */
+
+  const payslip =
+    await getPayslipByIdRepository(
+      id
+    );
+
+  if (!payslip) {
+
+    throw new Error(
+      "Payslip not found."
+    );
+
+  }
+
+  /**
+   * Delete PDF From Storage
+   */
+
+  await deletePayslipFromStorage(
+    payslip.file_url
+  );
+
+  /**
+   * Delete Database Record
+   */
+
+  return await deletePayslipRepository(
+    id
+  );
 
 };

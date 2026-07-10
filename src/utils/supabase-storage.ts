@@ -1,11 +1,12 @@
 import fs from "fs";
-import path from "path";
 import { supabase } from "../config/supabase";
 
 const BUCKET_NAME = "payslips";
 
 /**
- * Upload PDF to Supabase Storage
+ * ==========================================
+ * Upload Payslip To Supabase Storage
+ * ==========================================
  */
 
 export const uploadPayslipToStorage = async (
@@ -14,50 +15,72 @@ export const uploadPayslipToStorage = async (
 
   fileName: string
 
-) => {
+): Promise<string> => {
 
   /**
    * Read PDF
    */
 
-  const fileBuffer = fs.readFileSync(pdfPath);
+  const fileBuffer = fs.readFileSync(
+
+    pdfPath
+
+  );
 
   /**
-   * Upload
+   * Upload PDF
    */
 
-  const { data, error } =
-    await supabase.storage
-      .from(BUCKET_NAME)
-      .upload(
+  const {
 
-        `${fileName}.pdf`,
+    data,
 
-        fileBuffer,
+    error
 
-        {
+  } = await supabase.storage
 
-          contentType: "application/pdf",
+    .from(BUCKET_NAME)
 
-          upsert: true
+    .upload(
 
-        }
+      `${fileName}.pdf`,
 
-      );
+      fileBuffer,
+
+      {
+
+        contentType:
+
+          "application/pdf",
+
+        upsert: true
+
+      }
+
+    );
 
   if (error) {
 
-    throw new Error(error.message);
+    console.log(error);
+    throw error;
 
   }
 
   /**
-   * Remove Temp File
+   * Remove Local File
    */
 
-  if (fs.existsSync(pdfPath)) {
+  if (
 
-    fs.unlinkSync(pdfPath);
+    fs.existsSync(pdfPath)
+
+  ) {
+
+    fs.unlinkSync(
+
+      pdfPath
+
+    );
 
   }
 
@@ -66,32 +89,83 @@ export const uploadPayslipToStorage = async (
 };
 
 /**
- * Get Signed URL
+ * ==========================================
+ * Generate Signed URL
+ * ==========================================
  */
 
 export const getPayslipSignedUrl = async (
 
   filePath: string
 
-) => {
+): Promise<string> => {
 
-  const { data, error } =
-    await supabase.storage
-      .from(BUCKET_NAME)
-      .createSignedUrl(
+  const {
 
-        filePath,
+    data,
 
-        60 * 15
+    error
 
-      );
+  } = await supabase.storage
+
+    .from(BUCKET_NAME)
+
+    .createSignedUrl(
+
+      filePath,
+
+      60 * 15
+
+    );
 
   if (error) {
 
-    throw new Error(error.message);
+    throw new Error(
+
+      error.message
+
+    );
 
   }
 
   return data.signedUrl;
+
+};
+
+/**
+ * ==========================================
+ * Delete Payslip
+ * ==========================================
+ */
+
+export const deletePayslipFromStorage = async (
+
+  filePath: string
+
+): Promise<void> => {
+
+  const {
+
+    error
+
+  } = await supabase.storage
+
+    .from(BUCKET_NAME)
+
+    .remove([
+
+      filePath
+
+    ]);
+
+  if (error) {
+
+    throw new Error(
+
+      error.message
+
+    );
+
+  }
 
 };

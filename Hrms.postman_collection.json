@@ -1,0 +1,2551 @@
+{
+  "info": {
+    "_postman_id": "72647b0c-a6a6-4dec-b61a-f44be8b77452",
+    "name": "Hrms",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "38999270"
+  },
+  "item": [
+    {
+      "name": "Roles",
+      "item": [
+        {
+          "name": "insert role",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{supabase_service_role_api_key_0r8q}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"super_admin\",\r\n    \"description\":\"System Administrator\",\r\n    \"level\":1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/roles",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "roles"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "all roles",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{supabase_service_role_api_key_0r8q}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/roles",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "roles"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "role by id",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "\"\",",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"super_admin\",\r\n    \"description\":\"System Administrator\",\r\n    \"level\":1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/roles/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "roles",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "\"\",",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"super_admin\",\r\n    \"description\":\"System Administrator\",\r\n    \"level\":1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/roles/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "roles",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "\"\",",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"super_admin\",\r\n    \"description\":\"System Administrator\",\r\n    \"level\":1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/roles/5",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "roles",
+                "5"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Designations",
+      "item": [
+        {
+          "name": "insert designation",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{supabase_service_role_api_key_006x}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"super_admin\",\r\n    \"description\":\"System Administrator\",\r\n    \"level\":1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/designations",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "designations"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "all designations",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "\"\",",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"super_admin\",\r\n    \"description\":\"System Administrator\",\r\n    \"level\":1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/designations",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "designations"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "designation by id",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "\"\",",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"super_admin\",\r\n    \"description\":\"System Administrator\",\r\n    \"level\":1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/designations/<public_id>",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "designations",
+                "<public_id>"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "\"\",",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"super_admin\",\r\n    \"description\":\"System Administrator\",\r\n    \"level\":1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/designations/<public_id>",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "designations",
+                "<public_id>"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "\"\",",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"super_admin\",\r\n    \"description\":\"System Administrator\",\r\n    \"level\":1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/designations/<public_id>",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "designations",
+                "<public_id>"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Departments",
+      "item": [
+        {
+          "name": "insert department",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{supabase_service_role_api_key_006x}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"super_admin\",\r\n    \"description\":\"System Administrator\",\r\n    \"level\":1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/departments",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "departments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "all departments",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "\"\",",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"super_admin\",\r\n    \"description\":\"System Administrator\",\r\n    \"level\":1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/departments",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "departments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "department by id",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "\"\",",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"super_admin\",\r\n    \"description\":\"System Administrator\",\r\n    \"level\":1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/departments/<public_id>",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "departments",
+                "<public_id>"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "\"\",",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"super_admin\",\r\n    \"description\":\"System Administrator\",\r\n    \"level\":1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/departments/<public_id>",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "departments",
+                "<public_id>"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "\"\",",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"super_admin\",\r\n    \"description\":\"System Administrator\",\r\n    \"level\":1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/departments/<public_id>",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "departments",
+                "<public_id>"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Authentication",
+      "item": [
+        {
+          "name": "login",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"superadmin@gmail.com\",\r\n  \"password\": \"Test@12345\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/auth/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "refresh token",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"refreshToken\": \"prixckyh6psw\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/auth/refresh-token",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "auth",
+                "refresh-token"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_secret_0kb2}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "",
+                "value": "{{auth_secret_0kb2}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/auth/logout",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "auth",
+                "logout"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Employees Crud",
+      "item": [
+        {
+          "name": "insert",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"employee_id\": \"EMP001\",\r\n  \"first_name\": \"Deepika\",\r\n  \"last_name\": \"Mukkera\",\r\n  \"email\": \"hradmin1@gmail.com\",\r\n  \"password\": \"Test@12345\",\r\n\r\n  \"phone\": \"9876543210\",\r\n  \"profile_pic_url\": \"\",\r\n\r\n  \"date_of_birth\": \"2002-01-01\",\r\n  \"gender\": \"Male\",\r\n  \"marital_status\": \"Single\",\r\n\r\n  \"current_address\": \"Hyderabad\",\r\n  \"permanent_address\": \"Hyderabad\",\r\n\r\n  \"emergency_contact_name\": \"Ramesh\",\r\n  \"emergency_contact_phone\": \"9876543211\",\r\n  \"emergency_contact_relation\": \"Father\",\r\n\r\n  \"bank_account_number\": \"123456789\",\r\n  \"bank_ifsc_code\": \"SBIN000123\",\r\n\r\n  \"pan_number\": \"ABCDE1234F\",\r\n  \"aadhaar_number\": \"123412341234\",\r\n  \"passport_number\": \"M1234567\",\r\n\r\n  \"status\": \"active\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/employees",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "employees"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "all employees",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/employees",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "employees"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "employee by id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/employees/156ddead-efc2-4d75-85ff-0cbb1931558e",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "employees",
+                "156ddead-efc2-4d75-85ff-0cbb1931558e"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"gender\": \"Female\",\r\n  \"phone\": \"9999999999\",\r\n  \"current_address\": \"Chennai\",\r\n  \"status\": \"active\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/employees/156ddead-efc2-4d75-85ff-0cbb1931558e",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "employees",
+                "156ddead-efc2-4d75-85ff-0cbb1931558e"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_secret_0gdb}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"phone\": \"9999999999\",\r\n  \"current_address\": \"Chennai\",\r\n  \"status\": \"active\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/employees/9a67983d-5a07-48a1-af7a-50b76ce74543",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "employees",
+                "9a67983d-5a07-48a1-af7a-50b76ce74543"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Onboard Employee",
+      "item": [
+        {
+          "name": "Insert data using public id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"user_public_id\": \"156ddead-efc2-4d75-85ff-0cbb1931558e\",\r\n\r\n    \"department_id\": 1,\r\n\r\n    \"role_id\": 2,\r\n\r\n    \"designation_id\": 4,\r\n\r\n    \"manager_id\": \"fe2dd17c-1e4a-4d07-999a-50a6bbff7cb9\",\r\n\r\n    \"hr_manager_id\": \"fe2dd17c-1e4a-4d07-999a-50a6bbff7cb9\",\r\n\r\n    \"hire_date\": \"2026-07-08\",\r\n\r\n    \"confirmation_date\": \"2026-10-08\",\r\n\r\n    \"employment_type\": \"permanent\",\r\n\r\n    \"work_location\": \"Hyderabad\",\r\n\r\n    \"shift_start\": \"09:30:00\",\r\n\r\n    \"shift_end\": \"18:30:00\",\r\n\r\n    \"work_days\": \"Monday-Friday\",\r\n\r\n    \"grace_period_minutes\": 15,\r\n\r\n    \"weekly_working_hours\": 40\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/onboarding",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "onboarding"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all details",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/onboarding",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "onboarding"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get by public id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/onboarding/33199930-c3e8-4c42-b382-8c312ccec5ca",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "onboarding",
+                "33199930-c3e8-4c42-b382-8c312ccec5ca"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"work_location\": \"Bangalore\",\r\n  \"employment_type\": \"permanent\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/onboarding/33199930-c3e8-4c42-b382-8c312ccec5ca",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "onboarding",
+                "33199930-c3e8-4c42-b382-8c312ccec5ca"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/onboarding/bcd1c8a2-4d7e-475a-b50a-eca16601c343",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "onboarding",
+                "bcd1c8a2-4d7e-475a-b50a-eca16601c343"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Employee Salary",
+      "item": [
+        {
+          "name": "add salary",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"user_id\": \"8c69e394-d423-4adb-9f04-4364bff8cf15\",\r\n  \"annual_ctc\": 900000,\r\n  \"variable_pay_percentage\": 10,\r\n  \"annual_income_tax\": 0,\r\n  \"effective_date\": \"2026-07-01\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/payroll",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "payroll"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "all employee salaries",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNTE3MTI4LCJpYXQiOjE3ODM1MTM1MjgsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzUxMzUyOH1dLCJzZXNzaW9uX2lkIjoiNjUwZDk5ZjktYjA4Mi00N2VlLWE0OWItOTRhMWJjZmE0MjhmIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.0VNpJdCWn_hCAvMK8HfjDDQKbDMFbqt0T1t42qEkfODnBMQiO2ACvDmuhKkr5EyEJ5PXiPkUPwhh2XscJOxmYA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/payroll",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "payroll"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "salary based on public id",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/payroll/00660e11-3d03-4268-a068-028c20dca511",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "payroll",
+                "00660e11-3d03-4268-a068-028c20dca511"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update salary",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{supabase_service_role_api_key_0h2d}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"annual_ctc\": 1800000,\r\n  \"basic_percentage\": 45,\r\n  \"hra_percentage\": 22,\r\n  \"special_allowance\": 7000,\r\n  \"medical\": 3000\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/payroll/14960c8f-e740-4a15-87b5-a56f458c8d9d",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "payroll",
+                "14960c8f-e740-4a15-87b5-a56f458c8d9d"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete salary",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{supabase_service_role_api_key_0h2d}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"annual_ctc\": 1800000,\r\n  \"basic_percentage\": 45,\r\n  \"hra_percentage\": 22,\r\n  \"special_allowance\": 7000,\r\n  \"medical\": 3000\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/payroll/14960c8f-e740-4a15-87b5-a56f458c8d9d",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "payroll",
+                "14960c8f-e740-4a15-87b5-a56f458c8d9d"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Salary Components",
+      "item": [
+        {
+          "name": "add salary components",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNDM5MDUyLCJpYXQiOjE3ODM0MzU0NTIsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzQzNTQ1Mn1dLCJzZXNzaW9uX2lkIjoiY2VlZGUyNWUtZTM0Ny00NGQzLWI2MjktMDE3YTZkZmQ0MDU3IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.QAt2OvhkOuE0334nyEQXQOP55ygFF6jsWnYZvpa0TTBqlk-YlI6TfLqXBABPoKVp7QgLythPVHHb8SjBAv-pGw",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"user_id\": \"f8edd58e-6864-4eac-9096-eaf4f5dc94a4\",\r\n  \"component_name\": \"Internet Allowance\",\r\n  \"component_type\": \"earnings\",\r\n  \"amount\": 1500,\r\n  \"is_percentage\": false,\r\n  \"effective_date\": \"2026-07-01\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/salary-components",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "salary-components"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all components for user",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNTE4Nzg0LCJpYXQiOjE3ODM1MTUxODQsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzUxNTE4NH1dLCJzZXNzaW9uX2lkIjoiYTkxZjkzMjQtM2E3OS00Y2RmLTgwODktMDZlNGY3NTQ1NWJlIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.McpnazHsm9CTiNHdIXj6_0F6djXFaH0xGIqYAhG8Nd_xqLJV0tE3g_F4F1b9sDH4sLlYoBS3XOlMOU2w6HNi_Q",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/salary-components/user/8c69e394-d423-4adb-9f04-4364bff8cf15",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "salary-components",
+                "user",
+                "8c69e394-d423-4adb-9f04-4364bff8cf15"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all components",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNTE3MTI4LCJpYXQiOjE3ODM1MTM1MjgsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzUxMzUyOH1dLCJzZXNzaW9uX2lkIjoiNjUwZDk5ZjktYjA4Mi00N2VlLWE0OWItOTRhMWJjZmE0MjhmIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.0VNpJdCWn_hCAvMK8HfjDDQKbDMFbqt0T1t42qEkfODnBMQiO2ACvDmuhKkr5EyEJ5PXiPkUPwhh2XscJOxmYA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/salary-components",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "salary-components"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get component based on public id",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNDM5MDUyLCJpYXQiOjE3ODM0MzU0NTIsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzQzNTQ1Mn1dLCJzZXNzaW9uX2lkIjoiY2VlZGUyNWUtZTM0Ny00NGQzLWI2MjktMDE3YTZkZmQ0MDU3IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.QAt2OvhkOuE0334nyEQXQOP55ygFF6jsWnYZvpa0TTBqlk-YlI6TfLqXBABPoKVp7QgLythPVHHb8SjBAv-pGw",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/salary-components/38202320-fca3-466c-a956-4bf943371ecb",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "salary-components",
+                "38202320-fca3-466c-a956-4bf943371ecb"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update component",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNDM5MDUyLCJpYXQiOjE3ODM0MzU0NTIsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzQzNTQ1Mn1dLCJzZXNzaW9uX2lkIjoiY2VlZGUyNWUtZTM0Ny00NGQzLWI2MjktMDE3YTZkZmQ0MDU3IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.QAt2OvhkOuE0334nyEQXQOP55ygFF6jsWnYZvpa0TTBqlk-YlI6TfLqXBABPoKVp7QgLythPVHHb8SjBAv-pGw",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"amount\": 0,\r\n  \"is_active\": true\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/salary-components/38202320-fca3-466c-a956-4bf943371ecb",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "salary-components",
+                "38202320-fca3-466c-a956-4bf943371ecb"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete component",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_secret_0w8p}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/salary-components/a51c64f9-9cf5-4cdd-b76f-db0c2742ae25",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "salary-components",
+                "a51c64f9-9cf5-4cdd-b76f-db0c2742ae25"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Statuory Components",
+      "item": [
+        {
+          "name": "add statuory components",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNDg5OTk4LCJpYXQiOjE3ODM0ODYzOTgsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzQ4NjM5OH1dLCJzZXNzaW9uX2lkIjoiYTUzZjJhMzUtMWU1Zi00YTIzLWIzZjAtNWQwNzY5OTQzNzgxIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.Qz1H_rC4i_JTbuygUrbAbDlr_-Te4cClE3rqLV_SWTWRescNnIeNvb9-kMAWAaTT7QAZLDzKQ5Udcv0F7ZBpZQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"config_name\": \"basic_percentage\",\r\n  \"config_value\": 50,\r\n  \"description\": \"Basic Salary %\",\r\n  \"effective_date\": \"2026-07-01\",\r\n  \"is_active\": true\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/statutory-config",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "statutory-config"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all components",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNTE4Nzg0LCJpYXQiOjE3ODM1MTUxODQsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzUxNTE4NH1dLCJzZXNzaW9uX2lkIjoiYTkxZjkzMjQtM2E3OS00Y2RmLTgwODktMDZlNGY3NTQ1NWJlIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.McpnazHsm9CTiNHdIXj6_0F6djXFaH0xGIqYAhG8Nd_xqLJV0tE3g_F4F1b9sDH4sLlYoBS3XOlMOU2w6HNi_Q",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/statutory-config",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "statutory-config"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all components active",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNDg5OTk4LCJpYXQiOjE3ODM0ODYzOTgsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzQ4NjM5OH1dLCJzZXNzaW9uX2lkIjoiYTUzZjJhMzUtMWU1Zi00YTIzLWIzZjAtNWQwNzY5OTQzNzgxIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.Qz1H_rC4i_JTbuygUrbAbDlr_-Te4cClE3rqLV_SWTWRescNnIeNvb9-kMAWAaTT7QAZLDzKQ5Udcv0F7ZBpZQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/statutory-config/active",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "statutory-config",
+                "active"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get component based on public id",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNDg5OTk4LCJpYXQiOjE3ODM0ODYzOTgsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzQ4NjM5OH1dLCJzZXNzaW9uX2lkIjoiYTUzZjJhMzUtMWU1Zi00YTIzLWIzZjAtNWQwNzY5OTQzNzgxIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.Qz1H_rC4i_JTbuygUrbAbDlr_-Te4cClE3rqLV_SWTWRescNnIeNvb9-kMAWAaTT7QAZLDzKQ5Udcv0F7ZBpZQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/statutory-config/08af0ce5-fc16-4221-95f4-a2c6402a382d",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "statutory-config",
+                "08af0ce5-fc16-4221-95f4-a2c6402a382d"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update component",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNTE4Nzg0LCJpYXQiOjE3ODM1MTUxODQsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzUxNTE4NH1dLCJzZXNzaW9uX2lkIjoiYTkxZjkzMjQtM2E3OS00Y2RmLTgwODktMDZlNGY3NTQ1NWJlIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.McpnazHsm9CTiNHdIXj6_0F6djXFaH0xGIqYAhG8Nd_xqLJV0tE3g_F4F1b9sDH4sLlYoBS3XOlMOU2w6HNi_Q",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"description\": \"Updated alowance %\",\r\n  \"config_value\": 50\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/statutory-config/de87e0d6-43f6-4b93-99a5-95cc21eafe5b",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "statutory-config",
+                "de87e0d6-43f6-4b93-99a5-95cc21eafe5b"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete component",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNDg5OTk4LCJpYXQiOjE3ODM0ODYzOTgsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzQ4NjM5OH1dLCJzZXNzaW9uX2lkIjoiYTUzZjJhMzUtMWU1Zi00YTIzLWIzZjAtNWQwNzY5OTQzNzgxIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.Qz1H_rC4i_JTbuygUrbAbDlr_-Te4cClE3rqLV_SWTWRescNnIeNvb9-kMAWAaTT7QAZLDzKQ5Udcv0F7ZBpZQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/statutory-config/08af0ce5-fc16-4221-95f4-a2c6402a382d",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "statutory-config",
+                "08af0ce5-fc16-4221-95f4-a2c6402a382d"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Payroll Genration",
+      "item": [
+        {
+          "name": "Generate payroll",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNTE3MTI4LCJpYXQiOjE3ODM1MTM1MjgsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzUxMzUyOH1dLCJzZXNzaW9uX2lkIjoiNjUwZDk5ZjktYjA4Mi00N2VlLWE0OWItOTRhMWJjZmE0MjhmIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.0VNpJdCWn_hCAvMK8HfjDDQKbDMFbqt0T1t42qEkfODnBMQiO2ACvDmuhKkr5EyEJ5PXiPkUPwhh2XscJOxmYA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"user_id\": \"8c69e394-d423-4adb-9f04-4364bff8cf15\",\r\n  \"month_year\": \"2026-07-01\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/payroll-generation/generate",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "payroll-generation",
+                "generate"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all payrolls",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNDk3NDk4LCJpYXQiOjE3ODM0OTM4OTgsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzQ5Mzg5OH1dLCJzZXNzaW9uX2lkIjoiNjA1NTA3YzctYTQ1My00NmFlLThjZmEtMjI3YTYzNjIzNmU4IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.ISKWecjIu-5s_uM6R09BXWsGKM-sfJPpTqHzu1Xp4pGoAYPHYrbKyfnPyWUBMP6xOtGq5-gwr8-XsBmGcJ6_Qw",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/payroll-generation",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "payroll-generation"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get payroll based on public id",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNDg5OTk4LCJpYXQiOjE3ODM0ODYzOTgsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzQ4NjM5OH1dLCJzZXNzaW9uX2lkIjoiYTUzZjJhMzUtMWU1Zi00YTIzLWIzZjAtNWQwNzY5OTQzNzgxIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.Qz1H_rC4i_JTbuygUrbAbDlr_-Te4cClE3rqLV_SWTWRescNnIeNvb9-kMAWAaTT7QAZLDzKQ5Udcv0F7ZBpZQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/payroll-generation/c00ff688-4b1e-483d-a707-fe803ec7f8bf",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "payroll-generation",
+                "c00ff688-4b1e-483d-a707-fe803ec7f8bf"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get payroll for single employee",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNDg5OTk4LCJpYXQiOjE3ODM0ODYzOTgsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzQ4NjM5OH1dLCJzZXNzaW9uX2lkIjoiYTUzZjJhMzUtMWU1Zi00YTIzLWIzZjAtNWQwNzY5OTQzNzgxIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.Qz1H_rC4i_JTbuygUrbAbDlr_-Te4cClE3rqLV_SWTWRescNnIeNvb9-kMAWAaTT7QAZLDzKQ5Udcv0F7ZBpZQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/payroll-generation/c00ff688-4b1e-483d-a707-fe803ec7f8bf",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "payroll-generation",
+                "c00ff688-4b1e-483d-a707-fe803ec7f8bf"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "pay the payroll using public id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNDg5OTk4LCJpYXQiOjE3ODM0ODYzOTgsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzQ4NjM5OH1dLCJzZXNzaW9uX2lkIjoiYTUzZjJhMzUtMWU1Zi00YTIzLWIzZjAtNWQwNzY5OTQzNzgxIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.Qz1H_rC4i_JTbuygUrbAbDlr_-Te4cClE3rqLV_SWTWRescNnIeNvb9-kMAWAaTT7QAZLDzKQ5Udcv0F7ZBpZQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"payment_id\": \"PAY-202607001\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/payroll-generation/pay/c00ff688-4b1e-483d-a707-fe803ec7f8bf",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "payroll-generation",
+                "pay",
+                "c00ff688-4b1e-483d-a707-fe803ec7f8bf"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete the payroll",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/payroll-generation/00660e11-3d03-4268-a068-028c20dca511",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "payroll-generation",
+                "00660e11-3d03-4268-a068-028c20dca511"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Salary statements",
+      "item": [
+        {
+          "name": "Salary statement",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNTE3MTI4LCJpYXQiOjE3ODM1MTM1MjgsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzUxMzUyOH1dLCJzZXNzaW9uX2lkIjoiNjUwZDk5ZjktYjA4Mi00N2VlLWE0OWItOTRhMWJjZmE0MjhmIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.0VNpJdCWn_hCAvMK8HfjDDQKbDMFbqt0T1t42qEkfODnBMQiO2ACvDmuhKkr5EyEJ5PXiPkUPwhh2XscJOxmYA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/salary-statements/fe2dd17c-1e4a-4d07-999a-50a6bbff7cb9/2026-07-01",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "salary-statements",
+                "fe2dd17c-1e4a-4d07-999a-50a6bbff7cb9",
+                "2026-07-01"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Salary Histroy",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNDk1ODk0LCJpYXQiOjE3ODM0OTIyOTQsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzQ5MjI5NH1dLCJzZXNzaW9uX2lkIjoiYTdjZGVhOTEtOGM1Yi00MjU4LWExOWYtMzU1OTUyZDdiYzhjIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.F1ZK8CLlcBlkm3PCrfsE3lSJr6jg7VqbQ7YKzGXC_SIK9cdnZ3Vaw37xaulhV0-PN_sb9JblptRfNCkYpCqjMQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/salary-statements/history/f8edd58e-6864-4eac-9096-eaf4f5dc94a4",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "salary-statements",
+                "history",
+                "f8edd58e-6864-4eac-9096-eaf4f5dc94a4"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "monthly payroll summary",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNDk1ODk0LCJpYXQiOjE3ODM0OTIyOTQsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzQ5MjI5NH1dLCJzZXNzaW9uX2lkIjoiYTdjZGVhOTEtOGM1Yi00MjU4LWExOWYtMzU1OTUyZDdiYzhjIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.F1ZK8CLlcBlkm3PCrfsE3lSJr6jg7VqbQ7YKzGXC_SIK9cdnZ3Vaw37xaulhV0-PN_sb9JblptRfNCkYpCqjMQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/salary-statements/summary/2026-07-01",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "salary-statements",
+                "summary",
+                "2026-07-01"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Payslips",
+      "item": [
+        {
+          "name": "Generate Payslip",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNjY0NDY5LCJpYXQiOjE3ODM2NjA4NjksImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzY2MDg2OX1dLCJzZXNzaW9uX2lkIjoiMzVhZDQ5NTAtY2RlZC00NmYwLTgyZDMtZjc2YzIxMTI4MjdmIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.tCEVBO4FLIlBCIPonBeXp3UbTZTnfEHttlQCLDx3EjG8IsehdSc0mdxq5XA26L2B2JKKsHV08qWbRu1sEUYFVA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/payslip/generate/ebeb5d2b-38ab-4be1-b28e-716ebbabf5ba",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "payslip",
+                "generate",
+                "ebeb5d2b-38ab-4be1-b28e-716ebbabf5ba"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get payslip using user id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNjY0NDY5LCJpYXQiOjE3ODM2NjA4NjksImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzY2MDg2OX1dLCJzZXNzaW9uX2lkIjoiMzVhZDQ5NTAtY2RlZC00NmYwLTgyZDMtZjc2YzIxMTI4MjdmIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.tCEVBO4FLIlBCIPonBeXp3UbTZTnfEHttlQCLDx3EjG8IsehdSc0mdxq5XA26L2B2JKKsHV08qWbRu1sEUYFVA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/payslip/user/8c69e394-d423-4adb-9f04-4364bff8cf15",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "payslip",
+                "user",
+                "8c69e394-d423-4adb-9f04-4364bff8cf15"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Download payslip by public id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNjY0NTY5LCJpYXQiOjE3ODM2NjA5NjksImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzY2MDk2OX1dLCJzZXNzaW9uX2lkIjoiNGUzNDE4ZDUtYTI3My00ODg4LTk5OTQtMmMwZTY1MDA4ZDA2IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.OO32NCTtjRwjSkuuJz6KqSCM_lClZI039xftuw5M6QOARti11yRj5mLs9arjYwAd3FOAWg-OKbJBovOPDS4CHQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/payslip/download/b8931f42-b205-44fb-a0c2-ffe1e6339bfd",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "payslip",
+                "download",
+                "b8931f42-b205-44fb-a0c2-ffe1e6339bfd"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "all payslips",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNjY0NTY5LCJpYXQiOjE3ODM2NjA5NjksImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzY2MDk2OX1dLCJzZXNzaW9uX2lkIjoiNGUzNDE4ZDUtYTI3My00ODg4LTk5OTQtMmMwZTY1MDA4ZDA2IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.OO32NCTtjRwjSkuuJz6KqSCM_lClZI039xftuw5M6QOARti11yRj5mLs9arjYwAd3FOAWg-OKbJBovOPDS4CHQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/payslip",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "payslip"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get payslip by public id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNjY0NTY5LCJpYXQiOjE3ODM2NjA5NjksImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzY2MDk2OX1dLCJzZXNzaW9uX2lkIjoiNGUzNDE4ZDUtYTI3My00ODg4LTk5OTQtMmMwZTY1MDA4ZDA2IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.OO32NCTtjRwjSkuuJz6KqSCM_lClZI039xftuw5M6QOARti11yRj5mLs9arjYwAd3FOAWg-OKbJBovOPDS4CHQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/payslip/b8931f42-b205-44fb-a0c2-ffe1e6339bfd",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "payslip",
+                "b8931f42-b205-44fb-a0c2-ffe1e6339bfd"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete payslip by public id",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/payslip/b8931f42-b205-44fb-a0c2-ffe1e6339bfd",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "payslip",
+                "b8931f42-b205-44fb-a0c2-ffe1e6339bfd"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "auth_secret_0kb2",
+      "secret": true
+    },
+    {
+      "key": "supabase_service_role_api_key_0dwp",
+      "secret": true
+    },
+    {
+      "key": "auth_secret_0wpv",
+      "secret": true
+    },
+    {
+      "key": "supabase_service_role_api_key_006x",
+      "secret": true
+    },
+    {
+      "key": "supabase_service_role_api_key_0gdb",
+      "secret": true
+    },
+    {
+      "key": "auth_secret_0gdb",
+      "secret": true
+    },
+    {
+      "key": "supabase_service_role_api_key_0acc",
+      "secret": true
+    },
+    {
+      "key": "auth_secret_0nkj",
+      "secret": true
+    },
+    {
+      "key": "supabase_service_role_api_key_0nkj",
+      "secret": true
+    },
+    {
+      "key": "supabase_service_role_api_key_18je",
+      "secret": true
+    },
+    {
+      "key": "supabase_service_role_api_key_0x4i",
+      "secret": true
+    },
+    {
+      "key": "supabase_service_role_api_key_0r8q",
+      "secret": true
+    },
+    {
+      "key": "auth_secret_0h2d",
+      "secret": true
+    },
+    {
+      "key": "supabase_service_role_api_key_0h2d",
+      "secret": true
+    },
+    {
+      "key": "supabase_service_role_api_key_1227",
+      "secret": true
+    },
+    {
+      "key": "auth_secret_121p",
+      "secret": true
+    },
+    {
+      "key": "auth_secret_0w8p",
+      "secret": true
+    },
+    {
+      "key": "auth_secret_0k43",
+      "secret": true
+    },
+    {
+      "key": "auth_secret_19pt",
+      "secret": true
+    },
+    {
+      "key": "auth_secret_00q6",
+      "secret": true
+    },
+    {
+      "key": "auth_secret_0y1c",
+      "secret": true
+    },
+    {
+      "key": "supabase_service_role_api_key_0qtr",
+      "secret": true
+    },
+    {
+      "key": "supabase_service_role_api_key_0l3j",
+      "secret": true
+    }
+  ]
+}

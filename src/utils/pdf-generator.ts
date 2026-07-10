@@ -3,7 +3,9 @@ import fs from "fs";
 import path from "path";
 
 /**
+ * ==========================================
  * Generate Payslip PDF
+ * ==========================================
  */
 
 export const generatePDF = async (
@@ -48,25 +50,41 @@ export const generatePDF = async (
 
   );
 
-  /**
-   * Launch Browser
-   */
-
-  const browser = await puppeteer.launch({
-
-    headless: true
-
-  });
+  let browser;
 
   try {
+
+    /**
+     * Launch Browser
+     */
+
+    browser = await puppeteer.launch({
+
+      headless: true,
+
+      args: [
+
+        "--no-sandbox",
+
+        "--disable-setuid-sandbox"
+
+      ]
+
+    });
 
     const page = await browser.newPage();
 
     /**
-     * HTML
+     * Load HTML
      */
 
     await page.setContent(html);
+
+    /**
+     * Wait for page to finish loading
+     */
+
+    await page.waitForNetworkIdle();
 
     /**
      * Generate PDF
@@ -94,12 +112,22 @@ export const generatePDF = async (
 
     });
 
+    return pdfPath;
+
+  } catch (error: any) {
+
+    console.error("PDF Generation Error:", error);
+
+    throw error;
+
   } finally {
 
-    await browser.close();
+    if (browser) {
+
+      await browser.close();
+
+    }
 
   }
-
-  return pdfPath;
 
 };

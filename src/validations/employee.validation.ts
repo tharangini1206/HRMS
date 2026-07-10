@@ -37,6 +37,7 @@ export const createEmployeeSchema = z.object({
 
   phone: z
     .string()
+    .regex(/^\d{10}$/, "Phone number must be exactly 10 digits")
     .optional(),
 
   profile_pic_url: z
@@ -93,6 +94,7 @@ export const createEmployeeSchema = z.object({
 
   passport_number: z
     .string()
+    .nullable()
     .optional(),
 
   status: z

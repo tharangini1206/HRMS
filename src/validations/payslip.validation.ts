@@ -1,11 +1,11 @@
 import { z } from "zod";
 
-/**
- * Generate Payslip
- */
+
 
 export const generatePayslipSchema = z.object({
 
-  payroll_id: z.string().uuid()
+  payrollId: z
+    .string()
+    .uuid("Valid Payroll ID is required")
 
 });
