@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "email": "admin@hrms.com",
+    "password": "Admin@123",
+    "name": "Super Admin",
+    "role": "SUPER_ADMIN"
+  },
+  {
+    "id": 2,
+    "email": "hr@hrms.com",
+    "password": "Hr@123",
+    "name": "HR Admin",
+    "role": "HR_ADMIN"
+  },
+  {
+    "id": 3,
+    "email": "manager@hrms.com",
+    "password": "Manager@123",
+    "name": "Project Manager",
+    "role": "MANAGER"
+  },
+  {
+    "id": 4,
+    "email": "employee@hrms.com",
+    "password": "Employee@123",
+    "name": "John Doe",
+    "role": "EMPLOYEE"
+  },
+  {
+    "id": 5,
+    "email": "finance@hrms.com",
+    "password": "Finance@123",
+    "name": "Finance Manager",
+    "role": "FINANCE"
+  }
+]

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import bgImage from "@/assets/images/hrms-bg1.jpeg";
 import logo from "@/assets/images/hrms-logo1.png";
 import { useState, useEffect, type ReactNode } from "react";
@@ -19,6 +20,7 @@ import { FaGithub } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { authService } from "@/services/auth.service";
 
 const loginSchema = z.object({
   email: z.string().min(1, "Email is required").email("Enter a valid email"),
@@ -105,6 +107,9 @@ export default function LoginPage() {
     }
   }, [mounted]);
 
+  const router = useRouter();
+  const [loginError, setLoginError] = useState<string | null>(null);
+
   const {
     register,
     handleSubmit,
@@ -118,8 +123,35 @@ export default function LoginPage() {
     },
   });
 
-  const onSubmit = async (_data: LoginForm) => {
-    // TODO: connect to authentication API
+  const onSubmit = async (data: LoginForm) => {
+    setLoginError(null);
+
+    try {
+      const response = await authService.login(data);
+      const role = response.user?.role?.toString()?.toUpperCase();
+
+      switch (role) {
+        case "SUPER_ADMIN":
+          router.push("/super-admin");
+          break;
+        case "HR_ADMIN":
+          router.push("/hr");
+          break;
+        case "MANAGER":
+          router.push("/manager");
+          break;
+        case "EMPLOYEE":
+          router.push("/employee");
+          break;
+        case "FINANCE":
+          router.push("/finance");
+          break;
+        default:
+          router.push("/");
+      }
+    } catch (error) {
+      setLoginError("Invalid email or password.");
+    }
   };
 
   return (
@@ -280,6 +312,10 @@ export default function LoginPage() {
                   {!isSubmitting && <ArrowRight size={18} />}
                 </button>
 
+                {loginError ? (
+                  <p className="mt-3 text-sm text-red-500">{loginError}</p>
+                ) : null}
+
                 <div className="relative py-3">
                   <div className="absolute inset-x-0 top-1/2 h-px bg-slate-200" />
                   <p className="relative mx-auto w-fit bg-white px-4 text-sm text-slate-500">
@@ -312,3 +348,4 @@ export default function LoginPage() {
     </main>
   );
 }
+
