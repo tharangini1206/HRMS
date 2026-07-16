@@ -5,7 +5,7 @@ import rateLimit from "express-rate-limit";
 import morgan from "morgan";
 
 import swaggerUi from "swagger-ui-express";
-import { swaggerSpec } from "./docs/swagger";
+import swaggerDocument from "../swagger-output.json";
 
 import routes from "./routes";
 import { errorHandler } from "./middlewares/error.middleware";
@@ -36,7 +36,7 @@ app.use(
 app.use(
   "/docs",
   swaggerUi.serve,
-  swaggerUi.setup(swaggerSpec)
+  swaggerUi.setup(swaggerDocument)
 );
 
 // Version 1 APIs

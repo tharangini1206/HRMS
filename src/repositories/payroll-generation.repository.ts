@@ -298,6 +298,42 @@ async (
 };
 
 /**
+ * Approve / Reject Payroll
+ */
+
+export const updatePayrollStatusRepository = async (
+
+  id: string,
+
+  status: "approved" | "failed"
+
+) => {
+
+  const { data, error } =
+    await supabase
+      .from("payroll")
+      .update({
+
+        status,
+
+        updated_at: new Date().toISOString()
+
+      })
+      .eq("public_id", id)
+      .select()
+      .single();
+
+  if (error) {
+
+    throw new Error(error.message);
+
+  }
+
+  return data;
+
+};
+
+/**
  * Delete Payroll
  */
 

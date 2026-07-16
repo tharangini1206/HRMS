@@ -835,7 +835,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzOTM5MTg4LCJpYXQiOjE3ODM5MzU1ODgsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzkzNTU4OH1dLCJzZXNzaW9uX2lkIjoiYThmNDFiMDMtNDQ5ZC00YTA2LWEwYjItMWEyMzAzZWQxZTU1IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.h2blTe6TCf288GyfiKA2_o61vac1yxka1fa2MXhkaKk_WCba9S3Zmi-5u-2JxRCqYe_xwM1QePVpuIPM0whoXA",
                   "type": "string"
                 }
               ]
@@ -989,7 +989,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzOTM5MTg4LCJpYXQiOjE3ODM5MzU1ODgsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzkzNTU4OH1dLCJzZXNzaW9uX2lkIjoiYThmNDFiMDMtNDQ5ZC00YTA2LWEwYjItMWEyMzAzZWQxZTU1IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.h2blTe6TCf288GyfiKA2_o61vac1yxka1fa2MXhkaKk_WCba9S3Zmi-5u-2JxRCqYe_xwM1QePVpuIPM0whoXA",
                   "type": "string"
                 }
               ]
@@ -998,7 +998,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"user_public_id\": \"156ddead-efc2-4d75-85ff-0cbb1931558e\",\r\n\r\n    \"department_id\": 1,\r\n\r\n    \"role_id\": 2,\r\n\r\n    \"designation_id\": 4,\r\n\r\n    \"manager_id\": \"fe2dd17c-1e4a-4d07-999a-50a6bbff7cb9\",\r\n\r\n    \"hr_manager_id\": \"fe2dd17c-1e4a-4d07-999a-50a6bbff7cb9\",\r\n\r\n    \"hire_date\": \"2026-07-08\",\r\n\r\n    \"confirmation_date\": \"2026-10-08\",\r\n\r\n    \"employment_type\": \"permanent\",\r\n\r\n    \"work_location\": \"Hyderabad\",\r\n\r\n    \"shift_start\": \"09:30:00\",\r\n\r\n    \"shift_end\": \"18:30:00\",\r\n\r\n    \"work_days\": \"Monday-Friday\",\r\n\r\n    \"grace_period_minutes\": 15,\r\n\r\n    \"weekly_working_hours\": 40\r\n}",
+              "raw": "{\r\n    \"user_public_id\": \"d50a411f-d50f-49b8-b9af-841d04ad426d\",\r\n\r\n    \"department_id\": 2,\r\n\r\n    \"role_id\": 5,\r\n\r\n    \"designation_id\": 1,\r\n\r\n    \"manager_id\": \"fe2dd17c-1e4a-4d07-999a-50a6bbff7cb9\",\r\n\r\n    \"hr_manager_id\": \"fe2dd17c-1e4a-4d07-999a-50a6bbff7cb9\",\r\n\r\n    \"hire_date\": \"2026-07-08\",\r\n\r\n    \"confirmation_date\": \"2026-10-08\",\r\n\r\n    \"employment_type\": \"permanent\",\r\n\r\n    \"work_location\": \"wfo\",\r\n\r\n    \"shift_start\": \"09:30:00\",\r\n\r\n    \"shift_end\": \"18:30:00\",\r\n\r\n    \"work_days\": \"Monday-Friday\",\r\n\r\n    \"grace_period_minutes\": 15,\r\n\r\n    \"weekly_working_hours\": 40\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1165,7 +1165,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzOTQ1OTg1LCJpYXQiOjE3ODM5NDIzODUsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4Mzk0MjM4NX1dLCJzZXNzaW9uX2lkIjoiMDY0YThjOGItMjYxMS00N2Q4LTlkOGEtYjAwMWI0OTYzN2JmIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.Yw_ycdVQahR0NYwCn7gp4271ICrtz7vu26iSHse2NQAwBVeKZ4q9uo4MRPwIEuwI5JUqQjx6mM72aoj7oO3ZWA",
                   "type": "string"
                 }
               ]
@@ -1174,7 +1174,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"user_id\": \"8c69e394-d423-4adb-9f04-4364bff8cf15\",\r\n  \"annual_ctc\": 900000,\r\n  \"variable_pay_percentage\": 10,\r\n  \"annual_income_tax\": 0,\r\n  \"effective_date\": \"2026-07-01\"\r\n}",
+              "raw": "{\r\n  \"user_id\": \"65b4bc38-0c79-4657-8604-5b1c56122641\",\r\n  \"annual_ctc\": 1800000,\r\n  \"variable_pay_percentage\": 15,\r\n  \"effective_date\": \"2026-07-01\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1206,7 +1206,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNTE3MTI4LCJpYXQiOjE3ODM1MTM1MjgsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzUxMzUyOH1dLCJzZXNzaW9uX2lkIjoiNjUwZDk5ZjktYjA4Mi00N2VlLWE0OWItOTRhMWJjZmE0MjhmIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.0VNpJdCWn_hCAvMK8HfjDDQKbDMFbqt0T1t42qEkfODnBMQiO2ACvDmuhKkr5EyEJ5PXiPkUPwhh2XscJOxmYA",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzg0MDI1NDg3LCJpYXQiOjE3ODQwMjE4ODcsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4NDAyMTg4N31dLCJzZXNzaW9uX2lkIjoiMTgyNDRjMjktNjc1My00NzBhLWEwN2EtYjE5OTgyNjhlZTY2IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.hOIawEti0Pur7SvrN2uPK0Rm0yzKlL6R5tDn5KwdHFMl0EtnL1i6ovBWG5sFSn8iO3eXulixo7K17SrIZZ-2ew",
                   "type": "string"
                 }
               ]
@@ -1278,7 +1278,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "{{supabase_service_role_api_key_0h2d}}",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzg0MDI1NDg3LCJpYXQiOjE3ODQwMjE4ODcsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4NDAyMTg4N31dLCJzZXNzaW9uX2lkIjoiMTgyNDRjMjktNjc1My00NzBhLWEwN2EtYjE5OTgyNjhlZTY2IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.hOIawEti0Pur7SvrN2uPK0Rm0yzKlL6R5tDn5KwdHFMl0EtnL1i6ovBWG5sFSn8iO3eXulixo7K17SrIZZ-2ew",
                   "type": "string"
                 }
               ]
@@ -1287,7 +1287,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"annual_ctc\": 1800000,\r\n  \"basic_percentage\": 45,\r\n  \"hra_percentage\": 22,\r\n  \"special_allowance\": 7000,\r\n  \"medical\": 3000\r\n}",
+              "raw": "{\r\n  \"annual_ctc\": 1800000,\r\n  \"variable_pay_percentage\": 15,\r\n  \"effective_date\": \"2026-06-01\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1295,7 +1295,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:5000/api/v1/hr/payroll/14960c8f-e740-4a15-87b5-a56f458c8d9d",
+              "raw": "http://localhost:5000/api/v1/hr/payroll/31f9a42a-caf1-4172-9fa8-f76d67a39a9b",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -1306,7 +1306,7 @@
                 "v1",
                 "hr",
                 "payroll",
-                "14960c8f-e740-4a15-87b5-a56f458c8d9d"
+                "31f9a42a-caf1-4172-9fa8-f76d67a39a9b"
               ]
             }
           },
@@ -1320,7 +1320,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "{{supabase_service_role_api_key_0h2d}}",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzOTQ1OTg1LCJpYXQiOjE3ODM5NDIzODUsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4Mzk0MjM4NX1dLCJzZXNzaW9uX2lkIjoiMDY0YThjOGItMjYxMS00N2Q4LTlkOGEtYjAwMWI0OTYzN2JmIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.Yw_ycdVQahR0NYwCn7gp4271ICrtz7vu26iSHse2NQAwBVeKZ4q9uo4MRPwIEuwI5JUqQjx6mM72aoj7oO3ZWA",
                   "type": "string"
                 }
               ]
@@ -1337,7 +1337,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:5000/api/v1/hr/payroll/14960c8f-e740-4a15-87b5-a56f458c8d9d",
+              "raw": "http://localhost:5000/api/v1/hr/payroll/eed734a4-cc6e-4368-89d3-ab76b8a80549",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -1348,7 +1348,7 @@
                 "v1",
                 "hr",
                 "payroll",
-                "14960c8f-e740-4a15-87b5-a56f458c8d9d"
+                "eed734a4-cc6e-4368-89d3-ab76b8a80549"
               ]
             }
           },
@@ -1886,6 +1886,454 @@
       ]
     },
     {
+      "name": "Tax configuration",
+      "item": [
+        {
+          "name": "add tax",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzOTM4MzEwLCJpYXQiOjE3ODM5MzQ3MTAsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzkzNDcxMH1dLCJzZXNzaW9uX2lkIjoiNWM4MjU0NGQtNzg3YS00OTBjLWI4MzUtMTAyN2NmOTQyYTM5IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.D8Z4IjB0uVsb_VZt8zEeHAdJHz9aryKJmjd4EWtIm_ZFQMEK-UiXLaUXi-RlxN6FABqp4JeCQUKugTUKlOlvEg",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"financial_year\": \"2026-2027\",\r\n  \"tax_regime\": \"new\",\r\n  \"standard_deduction\": 75000,\r\n  \"rebate_87a_limit\": 1200000,\r\n  \"rebate_87a_amount\": 60000,\r\n  \"cess_percentage\": 4,\r\n  \"effective_date\": \"2026-04-01\",\r\n  \"is_active\": true\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/tax/configuration",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "tax",
+                "configuration"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzOTQwODA5LCJpYXQiOjE3ODM5MzcyMDksImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzkzNzIwOX1dLCJzZXNzaW9uX2lkIjoiNGQwZjFhYzEtM2QyMi00ZTcyLTk2OTEtM2Q5NWU3ZjVmM2UzIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.yER_gHKw-DmRYzewn7gwYVsLGGM3pq1BaeBihTK6_MbhWgkq15Fi3rQP9DESAU7l1ySyMFvvZakfvkp3miIA5Q",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/tax/configuration",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "tax",
+                "configuration"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get by public id",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzOTM3NjI0LCJpYXQiOjE3ODM5MzQwMjQsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzkzNDAyNH1dLCJzZXNzaW9uX2lkIjoiZTE3MDdkNDAtZDUwYS00MDdlLThhZjEtZWQzMjg2NDRhNWQyIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.xgS_Y-Ml16tkc3MY8KScJ4lFLpViZmRVtMJ6tW_Wc16iWG-rhNNhc4XLN4WQvCEgQEymrWGdV2M1kAoe2hgOxQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/tax/configuration/0ba242a6-9c37-4fdd-8197-ccd5e4d8ee2e",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "tax",
+                "configuration",
+                "0ba242a6-9c37-4fdd-8197-ccd5e4d8ee2e"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update by public id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzOTM3NjI0LCJpYXQiOjE3ODM5MzQwMjQsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzkzNDAyNH1dLCJzZXNzaW9uX2lkIjoiZTE3MDdkNDAtZDUwYS00MDdlLThhZjEtZWQzMjg2NDRhNWQyIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.xgS_Y-Ml16tkc3MY8KScJ4lFLpViZmRVtMJ6tW_Wc16iWG-rhNNhc4XLN4WQvCEgQEymrWGdV2M1kAoe2hgOxQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"financial_year\": \"2026-2027\",\r\n  \"tax_regime\": \"old\",\r\n  \"standard_deduction\": 75000,\r\n  \"rebate_87a_limit\": 1200000,\r\n  \"rebate_87a_amount\": 60000,\r\n  \"cess_percentage\": 4,\r\n  \"effective_date\": \"2026-04-01\",\r\n  \"is_active\": true\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/tax/configuration/0ba242a6-9c37-4fdd-8197-ccd5e4d8ee2e",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "tax",
+                "configuration",
+                "0ba242a6-9c37-4fdd-8197-ccd5e4d8ee2e"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzOTM3NjI0LCJpYXQiOjE3ODM5MzQwMjQsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzkzNDAyNH1dLCJzZXNzaW9uX2lkIjoiZTE3MDdkNDAtZDUwYS00MDdlLThhZjEtZWQzMjg2NDRhNWQyIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.xgS_Y-Ml16tkc3MY8KScJ4lFLpViZmRVtMJ6tW_Wc16iWG-rhNNhc4XLN4WQvCEgQEymrWGdV2M1kAoe2hgOxQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/tax/configuration/0ba242a6-9c37-4fdd-8197-ccd5e4d8ee2e",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "tax",
+                "configuration",
+                "0ba242a6-9c37-4fdd-8197-ccd5e4d8ee2e"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Tax slabs",
+      "item": [
+        {
+          "name": "add tax slabs based on tax id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzOTQwODA5LCJpYXQiOjE3ODM5MzcyMDksImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzkzNzIwOX1dLCJzZXNzaW9uX2lkIjoiNGQwZjFhYzEtM2QyMi00ZTcyLTk2OTEtM2Q5NWU3ZjVmM2UzIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.yER_gHKw-DmRYzewn7gwYVsLGGM3pq1BaeBihTK6_MbhWgkq15Fi3rQP9DESAU7l1ySyMFvvZakfvkp3miIA5Q",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"tax_configuration_id\": 2,\r\n  \"slab_order\": 7,\r\n  \"from_amount\": 2400001,\r\n  \"to_amount\": null,\r\n  \"tax_percentage\": 30\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/tax/slabs",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "tax",
+                "slabs"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzOTQwODA5LCJpYXQiOjE3ODM5MzcyMDksImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzkzNzIwOX1dLCJzZXNzaW9uX2lkIjoiNGQwZjFhYzEtM2QyMi00ZTcyLTk2OTEtM2Q5NWU3ZjVmM2UzIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.yER_gHKw-DmRYzewn7gwYVsLGGM3pq1BaeBihTK6_MbhWgkq15Fi3rQP9DESAU7l1ySyMFvvZakfvkp3miIA5Q",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/tax/slabs",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "tax",
+                "slabs"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get by public id",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzOTQwODA5LCJpYXQiOjE3ODM5MzcyMDksImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzkzNzIwOX1dLCJzZXNzaW9uX2lkIjoiNGQwZjFhYzEtM2QyMi00ZTcyLTk2OTEtM2Q5NWU3ZjVmM2UzIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.yER_gHKw-DmRYzewn7gwYVsLGGM3pq1BaeBihTK6_MbhWgkq15Fi3rQP9DESAU7l1ySyMFvvZakfvkp3miIA5Q",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/tax/slabs/0558fca4-e2b4-4d69-ad99-9ed87e5fe6ca",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "tax",
+                "slabs",
+                "0558fca4-e2b4-4d69-ad99-9ed87e5fe6ca"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzOTQwODA5LCJpYXQiOjE3ODM5MzcyMDksImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzkzNzIwOX1dLCJzZXNzaW9uX2lkIjoiNGQwZjFhYzEtM2QyMi00ZTcyLTk2OTEtM2Q5NWU3ZjVmM2UzIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.yER_gHKw-DmRYzewn7gwYVsLGGM3pq1BaeBihTK6_MbhWgkq15Fi3rQP9DESAU7l1ySyMFvvZakfvkp3miIA5Q",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/tax/slabs/0558fca4-e2b4-4d69-ad99-9ed87e5fe6ca",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "tax",
+                "slabs",
+                "0558fca4-e2b4-4d69-ad99-9ed87e5fe6ca"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzg0MDEyNTAwLCJpYXQiOjE3ODQwMDg5MDAsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4NDAwODkwMH1dLCJzZXNzaW9uX2lkIjoiMzM5MDMzODUtNzFlNy00ODY5LTk2MmMtYWY4NzUxOTRiY2E4IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.0-UuSQAElJsU4UUbzA13lqo4mYO7fnN-9jSEZY9l_ppowYIqwiL92_MTsx0_nX-WbYBrzR1aKYVmAZdprmE8dQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/tax/slabs/0558fca4-e2b4-4d69-ad99-9ed87e5fe6ca",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "tax",
+                "slabs",
+                "0558fca4-e2b4-4d69-ad99-9ed87e5fe6ca"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
       "name": "Payroll Genration",
       "item": [
         {
@@ -1896,7 +2344,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNTE3MTI4LCJpYXQiOjE3ODM1MTM1MjgsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzUxMzUyOH1dLCJzZXNzaW9uX2lkIjoiNjUwZDk5ZjktYjA4Mi00N2VlLWE0OWItOTRhMWJjZmE0MjhmIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.0VNpJdCWn_hCAvMK8HfjDDQKbDMFbqt0T1t42qEkfODnBMQiO2ACvDmuhKkr5EyEJ5PXiPkUPwhh2XscJOxmYA",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzg0MDI1NDg3LCJpYXQiOjE3ODQwMjE4ODcsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4NDAyMTg4N31dLCJzZXNzaW9uX2lkIjoiMTgyNDRjMjktNjc1My00NzBhLWEwN2EtYjE5OTgyNjhlZTY2IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.hOIawEti0Pur7SvrN2uPK0Rm0yzKlL6R5tDn5KwdHFMl0EtnL1i6ovBWG5sFSn8iO3eXulixo7K17SrIZZ-2ew",
                   "type": "string"
                 }
               ]
@@ -1941,7 +2389,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNDk3NDk4LCJpYXQiOjE3ODM0OTM4OTgsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzQ5Mzg5OH1dLCJzZXNzaW9uX2lkIjoiNjA1NTA3YzctYTQ1My00NmFlLThjZmEtMjI3YTYzNjIzNmU4IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.ISKWecjIu-5s_uM6R09BXWsGKM-sfJPpTqHzu1Xp4pGoAYPHYrbKyfnPyWUBMP6xOtGq5-gwr8-XsBmGcJ6_Qw",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzg0MDI1NDg3LCJpYXQiOjE3ODQwMjE4ODcsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4NDAyMTg4N31dLCJzZXNzaW9uX2lkIjoiMTgyNDRjMjktNjc1My00NzBhLWEwN2EtYjE5OTgyNjhlZTY2IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.hOIawEti0Pur7SvrN2uPK0Rm0yzKlL6R5tDn5KwdHFMl0EtnL1i6ovBWG5sFSn8iO3eXulixo7K17SrIZZ-2ew",
                   "type": "string"
                 }
               ]
@@ -1975,51 +2423,6 @@
           "response": []
         },
         {
-          "name": "get payroll based on public id",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "bearer",
-              "bearer": [
-                {
-                  "key": "token",
-                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNDg5OTk4LCJpYXQiOjE3ODM0ODYzOTgsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzQ4NjM5OH1dLCJzZXNzaW9uX2lkIjoiYTUzZjJhMzUtMWU1Zi00YTIzLWIzZjAtNWQwNzY5OTQzNzgxIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.Qz1H_rC4i_JTbuygUrbAbDlr_-Te4cClE3rqLV_SWTWRescNnIeNvb9-kMAWAaTT7QAZLDzKQ5Udcv0F7ZBpZQ",
-                  "type": "string"
-                }
-              ]
-            },
-            "method": "GET",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "http://localhost:5000/api/v1/hr/payroll-generation/c00ff688-4b1e-483d-a707-fe803ec7f8bf",
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "port": "5000",
-              "path": [
-                "api",
-                "v1",
-                "hr",
-                "payroll-generation",
-                "c00ff688-4b1e-483d-a707-fe803ec7f8bf"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
           "name": "get payroll for single employee",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -2030,7 +2433,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNDg5OTk4LCJpYXQiOjE3ODM0ODYzOTgsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzQ4NjM5OH1dLCJzZXNzaW9uX2lkIjoiYTUzZjJhMzUtMWU1Zi00YTIzLWIzZjAtNWQwNzY5OTQzNzgxIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.Qz1H_rC4i_JTbuygUrbAbDlr_-Te4cClE3rqLV_SWTWRescNnIeNvb9-kMAWAaTT7QAZLDzKQ5Udcv0F7ZBpZQ",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzg0MDEyODQ0LCJpYXQiOjE3ODQwMDkyNDQsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4NDAwOTI0NH1dLCJzZXNzaW9uX2lkIjoiNjUzZDdhYzMtNzBiYS00MGY4LWI0ZWItOGMwZTIwZWU0MjhmIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.CtGUJEhwc-rT6BbxKUUxdtEQnX-1_ssAH-8JS-52cylIKKngi6HYDvFDWs12sppWmKmGeSt6_ULtC_gaW-R-gw",
                   "type": "string"
                 }
               ]
@@ -2047,7 +2450,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:5000/api/v1/hr/payroll-generation/c00ff688-4b1e-483d-a707-fe803ec7f8bf",
+              "raw": "http://localhost:5000/api/v1/hr/payroll-generation/user/65b4bc38-0c79-4657-8604-5b1c56122641",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -2058,7 +2461,87 @@
                 "v1",
                 "hr",
                 "payroll-generation",
-                "c00ff688-4b1e-483d-a707-fe803ec7f8bf"
+                "user",
+                "65b4bc38-0c79-4657-8604-5b1c56122641"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get payroll based on public id",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzg0MDEyODQ0LCJpYXQiOjE3ODQwMDkyNDQsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4NDAwOTI0NH1dLCJzZXNzaW9uX2lkIjoiNjUzZDdhYzMtNzBiYS00MGY4LWI0ZWItOGMwZTIwZWU0MjhmIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.CtGUJEhwc-rT6BbxKUUxdtEQnX-1_ssAH-8JS-52cylIKKngi6HYDvFDWs12sppWmKmGeSt6_ULtC_gaW-R-gw",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/payroll-generation/80fbd52e-b5d2-421b-adf2-afe7bd2540fc",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "payroll-generation",
+                "80fbd52e-b5d2-421b-adf2-afe7bd2540fc"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "approve payroll",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzg0MDEyODQ0LCJpYXQiOjE3ODQwMDkyNDQsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4NDAwOTI0NH1dLCJzZXNzaW9uX2lkIjoiNjUzZDdhYzMtNzBiYS00MGY4LWI0ZWItOGMwZTIwZWU0MjhmIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.CtGUJEhwc-rT6BbxKUUxdtEQnX-1_ssAH-8JS-52cylIKKngi6HYDvFDWs12sppWmKmGeSt6_ULtC_gaW-R-gw",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/payroll-generation/approve/80fbd52e-b5d2-421b-adf2-afe7bd2540fc",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "payroll-generation",
+                "approve",
+                "80fbd52e-b5d2-421b-adf2-afe7bd2540fc"
               ]
             }
           },
@@ -2072,7 +2555,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNDg5OTk4LCJpYXQiOjE3ODM0ODYzOTgsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzQ4NjM5OH1dLCJzZXNzaW9uX2lkIjoiYTUzZjJhMzUtMWU1Zi00YTIzLWIzZjAtNWQwNzY5OTQzNzgxIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.Qz1H_rC4i_JTbuygUrbAbDlr_-Te4cClE3rqLV_SWTWRescNnIeNvb9-kMAWAaTT7QAZLDzKQ5Udcv0F7ZBpZQ",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzg0MDEyODQ0LCJpYXQiOjE3ODQwMDkyNDQsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4NDAwOTI0NH1dLCJzZXNzaW9uX2lkIjoiNjUzZDdhYzMtNzBiYS00MGY4LWI0ZWItOGMwZTIwZWU0MjhmIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.CtGUJEhwc-rT6BbxKUUxdtEQnX-1_ssAH-8JS-52cylIKKngi6HYDvFDWs12sppWmKmGeSt6_ULtC_gaW-R-gw",
                   "type": "string"
                 }
               ]
@@ -2081,7 +2564,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"payment_id\": \"PAY-202607001\"\r\n}",
+              "raw": "{\r\n  \"payment_id\": \"PAY-204407001\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -2089,7 +2572,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:5000/api/v1/hr/payroll-generation/pay/c00ff688-4b1e-483d-a707-fe803ec7f8bf",
+              "raw": "http://localhost:5000/api/v1/hr/payroll-generation/pay/80fbd52e-b5d2-421b-adf2-afe7bd2540fc",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -2101,7 +2584,41 @@
                 "hr",
                 "payroll-generation",
                 "pay",
-                "c00ff688-4b1e-483d-a707-fe803ec7f8bf"
+                "80fbd52e-b5d2-421b-adf2-afe7bd2540fc"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Reject payroll",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzg0MDEyNTAwLCJpYXQiOjE3ODQwMDg5MDAsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4NDAwODkwMH1dLCJzZXNzaW9uX2lkIjoiMzM5MDMzODUtNzFlNy00ODY5LTk2MmMtYWY4NzUxOTRiY2E4IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.0-UuSQAElJsU4UUbzA13lqo4mYO7fnN-9jSEZY9l_ppowYIqwiL92_MTsx0_nX-WbYBrzR1aKYVmAZdprmE8dQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/payroll-generation/reject/80fbd52e-b5d2-421b-adf2-afe7bd2540fc",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "payroll-generation",
+                "reject",
+                "80fbd52e-b5d2-421b-adf2-afe7bd2540fc"
               ]
             }
           },
@@ -2115,7 +2632,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzg0MDI1NDg3LCJpYXQiOjE3ODQwMjE4ODcsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4NDAyMTg4N31dLCJzZXNzaW9uX2lkIjoiMTgyNDRjMjktNjc1My00NzBhLWEwN2EtYjE5OTgyNjhlZTY2IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.hOIawEti0Pur7SvrN2uPK0Rm0yzKlL6R5tDn5KwdHFMl0EtnL1i6ovBWG5sFSn8iO3eXulixo7K17SrIZZ-2ew",
                   "type": "string"
                 }
               ]
@@ -2132,7 +2649,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:5000/api/v1/hr/payroll-generation/00660e11-3d03-4268-a068-028c20dca511",
+              "raw": "http://localhost:5000/api/v1/hr/payroll-generation/ebeb5d2b-38ab-4be1-b28e-716ebbabf5ba",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -2143,7 +2660,212 @@
                 "v1",
                 "hr",
                 "payroll-generation",
-                "00660e11-3d03-4268-a068-028c20dca511"
+                "ebeb5d2b-38ab-4be1-b28e-716ebbabf5ba"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Payslips",
+      "item": [
+        {
+          "name": "Generate Payslip",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzg0MDEyODQ0LCJpYXQiOjE3ODQwMDkyNDQsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4NDAwOTI0NH1dLCJzZXNzaW9uX2lkIjoiNjUzZDdhYzMtNzBiYS00MGY4LWI0ZWItOGMwZTIwZWU0MjhmIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.CtGUJEhwc-rT6BbxKUUxdtEQnX-1_ssAH-8JS-52cylIKKngi6HYDvFDWs12sppWmKmGeSt6_ULtC_gaW-R-gw",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/payslip/generate/80fbd52e-b5d2-421b-adf2-afe7bd2540fc",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "payslip",
+                "generate",
+                "80fbd52e-b5d2-421b-adf2-afe7bd2540fc"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get payslip using user id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNjY0NDY5LCJpYXQiOjE3ODM2NjA4NjksImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzY2MDg2OX1dLCJzZXNzaW9uX2lkIjoiMzVhZDQ5NTAtY2RlZC00NmYwLTgyZDMtZjc2YzIxMTI4MjdmIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.tCEVBO4FLIlBCIPonBeXp3UbTZTnfEHttlQCLDx3EjG8IsehdSc0mdxq5XA26L2B2JKKsHV08qWbRu1sEUYFVA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/payslip/user/8c69e394-d423-4adb-9f04-4364bff8cf15",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "payslip",
+                "user",
+                "8c69e394-d423-4adb-9f04-4364bff8cf15"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Download payslip by public id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzg0MDMxMjc0LCJpYXQiOjE3ODQwMjc2NzQsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4NDAyNzY3NH1dLCJzZXNzaW9uX2lkIjoiZGU5NTAzMTMtOWVlNC00NmE2LWFkZDItMWY5MDkwMjRiMWUyIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.rqifVoFFckeYiS_-hBijDaUkhYH2dbQ0D7HArn3Sn_7_udQ0bB9ldRT6frmiwu7Jw-CwoRAn-JuRWUz-R7_NnA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/payslip/download/29c38d45-2e2d-4a4b-95b7-674fc9b5a3d2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "payslip",
+                "download",
+                "29c38d45-2e2d-4a4b-95b7-674fc9b5a3d2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "all payslips",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzg0MDMxMjc0LCJpYXQiOjE3ODQwMjc2NzQsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4NDAyNzY3NH1dLCJzZXNzaW9uX2lkIjoiZGU5NTAzMTMtOWVlNC00NmE2LWFkZDItMWY5MDkwMjRiMWUyIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.rqifVoFFckeYiS_-hBijDaUkhYH2dbQ0D7HArn3Sn_7_udQ0bB9ldRT6frmiwu7Jw-CwoRAn-JuRWUz-R7_NnA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/payslip",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "payslip"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get payslip by public id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNjY0NTY5LCJpYXQiOjE3ODM2NjA5NjksImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzY2MDk2OX1dLCJzZXNzaW9uX2lkIjoiNGUzNDE4ZDUtYTI3My00ODg4LTk5OTQtMmMwZTY1MDA4ZDA2IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.OO32NCTtjRwjSkuuJz6KqSCM_lClZI039xftuw5M6QOARti11yRj5mLs9arjYwAd3FOAWg-OKbJBovOPDS4CHQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/payslip/b8931f42-b205-44fb-a0c2-ffe1e6339bfd",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "payslip",
+                "b8931f42-b205-44fb-a0c2-ffe1e6339bfd"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete payslip by public id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzg0MDMxMjc0LCJpYXQiOjE3ODQwMjc2NzQsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4NDAyNzY3NH1dLCJzZXNzaW9uX2lkIjoiZGU5NTAzMTMtOWVlNC00NmE2LWFkZDItMWY5MDkwMjRiMWUyIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.rqifVoFFckeYiS_-hBijDaUkhYH2dbQ0D7HArn3Sn_7_udQ0bB9ldRT6frmiwu7Jw-CwoRAn-JuRWUz-R7_NnA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/payslip/29c38d45-2e2d-4a4b-95b7-674fc9b5a3d2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "payslip",
+                "29c38d45-2e2d-4a4b-95b7-674fc9b5a3d2"
               ]
             }
           },
@@ -2259,25 +2981,358 @@
       ]
     },
     {
-      "name": "Payslips",
+      "name": "Payroll Reports",
       "item": [
         {
-          "name": "Generate Payslip",
+          "name": "Monthly report",
           "request": {
             "auth": {
               "type": "bearer",
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNjY0NDY5LCJpYXQiOjE3ODM2NjA4NjksImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzY2MDg2OX1dLCJzZXNzaW9uX2lkIjoiMzVhZDQ5NTAtY2RlZC00NmYwLTgyZDMtZjc2YzIxMTI4MjdmIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.tCEVBO4FLIlBCIPonBeXp3UbTZTnfEHttlQCLDx3EjG8IsehdSc0mdxq5XA26L2B2JKKsHV08qWbRu1sEUYFVA",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzg0MDE1MzcwLCJpYXQiOjE3ODQwMTE3NzAsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4NDAxMTc3MH1dLCJzZXNzaW9uX2lkIjoiMjcwN2E0ZGEtNzk5Zi00YjY0LWFjNDQtYTBlYmQ0MmM4MTQ3IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.SlflaHN_RXOatsu1b78YQ_Nc0ysWeT6uV8WUkBB0Qa6Zqo_0SBGkLAbTbHJahx0FBen0XR_Dqed2yNPtnnj2qg",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/payroll-report/monthly?month_year=2026-07-01",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "payroll-report",
+                "monthly"
+              ],
+              "query": [
+                {
+                  "key": "month_year",
+                  "value": "2026-07-01"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Department wise report",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzg0MDE2MDg5LCJpYXQiOjE3ODQwMTI0ODksImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4NDAxMjQ4OX1dLCJzZXNzaW9uX2lkIjoiZmQwZmQ1MzAtZDg3OS00NjU1LWExMmYtN2M3YjhkOWY5NTg4IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.gK_e20YqcrUf6dYtOs3uxpJGkmWdnvTuhDtnaLNGMS3bqZVrJjPcwZ1Ro9mhtKjECobwVPhvxqkIsALp529iwA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/payroll-report/department?month_year=2026-07-01",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "payroll-report",
+                "department"
+              ],
+              "query": [
+                {
+                  "key": "month_year",
+                  "value": "2026-07-01"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Total salary paid",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzg0MDE5OTMxLCJpYXQiOjE3ODQwMTYzMzEsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4NDAxNjMzMX1dLCJzZXNzaW9uX2lkIjoiZDNlNjE3ZGUtOTY4ZC00MDgxLThiM2UtMjgzMjNhMWQ3MTNiIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.0Ord3NBgsJ_pkiSnUn3DuudjFZ_R1zv4BDErYfR6gMWS6U4wb7qLzcODPUb6Wu_Q_BCZZKi46Lj-LkDvmk3HCQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/payroll-report/salary-paid?month_year=2026-07-01",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "payroll-report",
+                "salary-paid"
+              ],
+              "query": [
+                {
+                  "key": "month_year",
+                  "value": "2026-07-01"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Monthly tax",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzg0MDE5MTk2LCJpYXQiOjE3ODQwMTU1OTYsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4NDAxNTU5Nn1dLCJzZXNzaW9uX2lkIjoiOWZkMTQzY2MtNTE2Ny00Yzk0LWFmMDUtOTBmMTY2NTY4MThkIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.cXV-W5BOkHI2eMQzDRml3jzxb4IH2DBoWw9rkRp85COK-hcgoP6-m2240gLQdHHt90NCL79xJsEh01UM17bwiQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/payroll-report/tax?month_year=2026-07-01",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "payroll-report",
+                "tax"
+              ],
+              "query": [
+                {
+                  "key": "month_year",
+                  "value": "2026-07-01"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Payroll status",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzg0MDIwMjczLCJpYXQiOjE3ODQwMTY2NzMsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4NDAxNjY3M31dLCJzZXNzaW9uX2lkIjoiMTQyMGYwYjAtZDlhOS00MTI2LThkOTItMzllNTlmYTIwOWJkIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.IsyQXQujN34-Lqz1FSf-CAHqFd3FJWoUHmNy_aJQad_OhdA3t3XasunEF4q6855JsWCqM9pVz2rmU3aV8yIADw",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/payroll-report/status?month_year=2026-07-01",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "payroll-report",
+                "status"
+              ],
+              "query": [
+                {
+                  "key": "month_year",
+                  "value": "2026-07-01"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Lop report",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzg0MDIwNzgyLCJpYXQiOjE3ODQwMTcxODIsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4NDAxNzE4Mn1dLCJzZXNzaW9uX2lkIjoiYzYwZDFkMDAtOTE3Yy00YWY3LTk4M2MtNWU5ZWJmZjUzMzU3IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.qg1cFvRWvHnF4BUTDzyZlx34dwBOnZmXHqxJG4V4VS1a4qs5HVFgA1QkFMwG5mToC4bigy0mHyhVR-lbcPfd2w",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/payroll-report/lop?month_year=2026-07-01",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "payroll-report",
+                "lop"
+              ],
+              "query": [
+                {
+                  "key": "month_year",
+                  "value": "2026-07-01"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Payroll Dashboard",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzg0MDIxODAxLCJpYXQiOjE3ODQwMTgyMDEsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4NDAxODIwMX1dLCJzZXNzaW9uX2lkIjoiMWEwMGJjNmYtNDNiMy00NTFiLWI0NWItMTQ2MTZjMDVmZmJjIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.CMMlzAlc4lfb5x7CMFnyNyF4TONFl5huK9q-OIYWlVolrWBH9C2q88WQDdEVi_p-a10_XnjAXyIYV4fWCfmQmA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/payroll-report/dashboard?month_year=2026-07-01",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "payroll-report",
+                "dashboard"
+              ],
+              "query": [
+                {
+                  "key": "month_year",
+                  "value": "2026-07-01"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Yearly Payroll",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzg0MDIyMDgyLCJpYXQiOjE3ODQwMTg0ODIsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4NDAxODQ4Mn1dLCJzZXNzaW9uX2lkIjoiYjJhMTEzOWEtYzMyZi00MjI2LThkZTUtNzE5YTgxZjI1ZDhmIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.QXwue52soE6KlLE_XvJGwd4eVY_qoM39FyBLY1lrdLqyAo9Jo6gLHTaNz9yrplbe6gfwOf6WRxdnI5WDaBMv-Q",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": []
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/hr/payroll-report/yearly?year=2026",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "payroll-report",
+                "yearly"
+              ],
+              "query": [
+                {
+                  "key": "year",
+                  "value": "2026"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Bulk Payslips",
+      "item": [
+        {
+          "name": "Generate bulk payslip",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzg0MDMyNzg0LCJpYXQiOjE3ODQwMjkxODQsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4NDAyOTE4NH1dLCJzZXNzaW9uX2lkIjoiYmMyNzJmM2QtY2RmOS00Mjg2LWI2ZmMtYTMwMzE5OTRkZDdlIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.tyi1W5hNCBg21ZW4o5jRgEtaBrJdH71kETuWdA2kOAw1ph_A-ZITeRQmEiqYcMb90WL049qsWi_OfHIIk3PsSQ",
                   "type": "string"
                 }
               ]
             },
             "method": "POST",
             "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"month_year\": \"2026-07-01\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
             "url": {
-              "raw": "http://localhost:5000/api/v1/hr/payslip/generate/ebeb5d2b-38ab-4be1-b28e-716ebbabf5ba",
+              "raw": "http://localhost:5000/api/v1/hr/bulk-payslips/generate",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -2287,23 +3342,22 @@
                 "api",
                 "v1",
                 "hr",
-                "payslip",
-                "generate",
-                "ebeb5d2b-38ab-4be1-b28e-716ebbabf5ba"
+                "bulk-payslips",
+                "generate"
               ]
             }
           },
           "response": []
         },
         {
-          "name": "Get payslip using user id",
+          "name": "history",
           "request": {
             "auth": {
               "type": "bearer",
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNjY0NDY5LCJpYXQiOjE3ODM2NjA4NjksImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzY2MDg2OX1dLCJzZXNzaW9uX2lkIjoiMzVhZDQ5NTAtY2RlZC00NmYwLTgyZDMtZjc2YzIxMTI4MjdmIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.tCEVBO4FLIlBCIPonBeXp3UbTZTnfEHttlQCLDx3EjG8IsehdSc0mdxq5XA26L2B2JKKsHV08qWbRu1sEUYFVA",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzg0MDMyNzg0LCJpYXQiOjE3ODQwMjkxODQsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4NDAyOTE4NH1dLCJzZXNzaW9uX2lkIjoiYmMyNzJmM2QtY2RmOS00Mjg2LWI2ZmMtYTMwMzE5OTRkZDdlIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.tyi1W5hNCBg21ZW4o5jRgEtaBrJdH71kETuWdA2kOAw1ph_A-ZITeRQmEiqYcMb90WL049qsWi_OfHIIk3PsSQ",
                   "type": "string"
                 }
               ]
@@ -2311,7 +3365,7 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:5000/api/v1/hr/payslip/user/8c69e394-d423-4adb-9f04-4364bff8cf15",
+              "raw": "http://localhost:5000/api/v1/hr/bulk-payslips",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -2321,23 +3375,21 @@
                 "api",
                 "v1",
                 "hr",
-                "payslip",
-                "user",
-                "8c69e394-d423-4adb-9f04-4364bff8cf15"
+                "bulk-payslips"
               ]
             }
           },
           "response": []
         },
         {
-          "name": "Download payslip by public id",
+          "name": "Single record by id",
           "request": {
             "auth": {
               "type": "bearer",
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNjY0NTY5LCJpYXQiOjE3ODM2NjA5NjksImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzY2MDk2OX1dLCJzZXNzaW9uX2lkIjoiNGUzNDE4ZDUtYTI3My00ODg4LTk5OTQtMmMwZTY1MDA4ZDA2IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.OO32NCTtjRwjSkuuJz6KqSCM_lClZI039xftuw5M6QOARti11yRj5mLs9arjYwAd3FOAWg-OKbJBovOPDS4CHQ",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzg0MDI1NDg3LCJpYXQiOjE3ODQwMjE4ODcsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4NDAyMTg4N31dLCJzZXNzaW9uX2lkIjoiMTgyNDRjMjktNjc1My00NzBhLWEwN2EtYjE5OTgyNjhlZTY2IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.hOIawEti0Pur7SvrN2uPK0Rm0yzKlL6R5tDn5KwdHFMl0EtnL1i6ovBWG5sFSn8iO3eXulixo7K17SrIZZ-2ew",
                   "type": "string"
                 }
               ]
@@ -2345,7 +3397,7 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:5000/api/v1/hr/payslip/download/b8931f42-b205-44fb-a0c2-ffe1e6339bfd",
+              "raw": "http://localhost:5000/api/v1/hr/bulk-payslips/6d130d54-22a7-4e3a-8a6d-33421da49842",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -2355,86 +3407,20 @@
                 "api",
                 "v1",
                 "hr",
-                "payslip",
-                "download",
-                "b8931f42-b205-44fb-a0c2-ffe1e6339bfd"
+                "bulk-payslips",
+                "6d130d54-22a7-4e3a-8a6d-33421da49842"
               ]
             }
           },
           "response": []
         },
         {
-          "name": "all payslips",
-          "request": {
-            "auth": {
-              "type": "bearer",
-              "bearer": [
-                {
-                  "key": "token",
-                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNjY0NTY5LCJpYXQiOjE3ODM2NjA5NjksImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzY2MDk2OX1dLCJzZXNzaW9uX2lkIjoiNGUzNDE4ZDUtYTI3My00ODg4LTk5OTQtMmMwZTY1MDA4ZDA2IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.OO32NCTtjRwjSkuuJz6KqSCM_lClZI039xftuw5M6QOARti11yRj5mLs9arjYwAd3FOAWg-OKbJBovOPDS4CHQ",
-                  "type": "string"
-                }
-              ]
-            },
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "http://localhost:5000/api/v1/hr/payslip",
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "port": "5000",
-              "path": [
-                "api",
-                "v1",
-                "hr",
-                "payslip"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "get payslip by public id",
-          "request": {
-            "auth": {
-              "type": "bearer",
-              "bearer": [
-                {
-                  "key": "token",
-                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMwYjBiZDYyLTBjZWYtNDIxMS1iYTgyLTdiODA1NGMzZGZhMCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lqeG12dWZsb2psaGxyc3ZneWlkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZTJkZDE3Yy0xZTRhLTRkMDctOTk5YS01MGE2YmJmZjdjYjkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgzNjY0NTY5LCJpYXQiOjE3ODM2NjA5NjksImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MzY2MDk2OX1dLCJzZXNzaW9uX2lkIjoiNGUzNDE4ZDUtYTI3My00ODg4LTk5OTQtMmMwZTY1MDA4ZDA2IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.OO32NCTtjRwjSkuuJz6KqSCM_lClZI039xftuw5M6QOARti11yRj5mLs9arjYwAd3FOAWg-OKbJBovOPDS4CHQ",
-                  "type": "string"
-                }
-              ]
-            },
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "http://localhost:5000/api/v1/hr/payslip/b8931f42-b205-44fb-a0c2-ffe1e6339bfd",
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "port": "5000",
-              "path": [
-                "api",
-                "v1",
-                "hr",
-                "payslip",
-                "b8931f42-b205-44fb-a0c2-ffe1e6339bfd"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "delete payslip by public id",
+          "name": "delete history",
           "request": {
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "http://localhost:5000/api/v1/hr/payslip/b8931f42-b205-44fb-a0c2-ffe1e6339bfd",
+              "raw": "http://localhost:5000/api/v1/hr/bulk-payslips/6d130d54-22a7-4e3a-8a6d-33421da49842",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -2444,8 +3430,8 @@
                 "api",
                 "v1",
                 "hr",
-                "payslip",
-                "b8931f42-b205-44fb-a0c2-ffe1e6339bfd"
+                "bulk-payslips",
+                "6d130d54-22a7-4e3a-8a6d-33421da49842"
               ]
             }
           },

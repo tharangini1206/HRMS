@@ -24,7 +24,7 @@ export const createPayrollRepository = async (
             body.variable_pay_percentage ?? 0,
 
           annual_income_tax:
-            body.annual_income_tax ?? 0,
+            body.annual_income_tax,
 
           effective_date:
             body.effective_date
@@ -167,3 +167,4 @@ export const deletePayrollRepository = async (
   return data;
 
 };
+

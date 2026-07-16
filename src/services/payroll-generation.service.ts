@@ -18,9 +18,12 @@ import {
 
   markPayrollPaidRepository,
 
+  updatePayrollStatusRepository,
+
   deletePayrollGenerationRepository,
 
-  getPayrollAttendanceRepository
+  getPayrollAttendanceRepository,
+
 
 } from "../repositories/payroll-generation.repository";
 
@@ -418,7 +421,7 @@ export const generatePayrollService = async (
    */
 
   const incomeTax =
-    annualIncomeTax / 12;
+    Math.round(annualIncomeTax / 12);
 
   /**
    * LOP
@@ -440,7 +443,7 @@ export const generatePayrollService = async (
    * TDS
    */
 
-  const tdsDeduction = 0;
+  const tdsDeduction = incomeTax;
 
   /**
    * Other Deductions
@@ -463,8 +466,6 @@ export const generatePayrollService = async (
     esiEmployer +
 
     professionalTax +
-
-    incomeTax +
 
     customDeductions +
 
@@ -611,11 +612,104 @@ export const markPayrollPaidService = async (
 
 ) => {
 
+  const payroll =
+    await getPayrollGenerationByIdRepository(id);
+
+  if (!payroll) {
+
+    throw new Error(
+      "Payroll not found."
+    );
+
+  }
+
+  if (payroll.status !== "approved") {
+
+    throw new Error(
+      "Only approved payroll can be marked as paid."
+    );
+
+  }
+
   return await markPayrollPaidRepository(
 
     id,
 
     paymentId
+
+  );
+
+};
+
+/**
+ * Approve Payroll
+ */
+
+export const approvePayrollService = async (
+  id: string
+) => {
+
+  const payroll =
+    await getPayrollGenerationByIdRepository(id);
+
+  if (!payroll) {
+
+    throw new Error(
+      "Payroll not found."
+    );
+
+  }
+
+  if (payroll.status !== "processed") {
+
+    throw new Error(
+      "Only processed payroll can be approved."
+    );
+
+  }
+
+  return await updatePayrollStatusRepository(
+
+    id,
+
+    "approved"
+
+  );
+
+};
+
+/**
+ * Reject Payroll
+ */
+
+export const rejectPayrollService = async (
+  id: string
+) => {
+
+  const payroll =
+    await getPayrollGenerationByIdRepository(id);
+
+  if (!payroll) {
+
+    throw new Error(
+      "Payroll not found."
+    );
+
+  }
+
+  if (payroll.status !== "processed") {
+
+    throw new Error(
+      "Only processed payroll can be rejected."
+    );
+
+  }
+
+  return await updatePayrollStatusRepository(
+
+    id,
+
+    "failed"
 
   );
 

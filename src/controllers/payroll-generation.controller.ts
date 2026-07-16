@@ -10,7 +10,11 @@ import {
 
   getPayrollGenerationsByUserService,
 
+  approvePayrollService,
+
   markPayrollPaidService,
+
+  rejectPayrollService,
 
   deletePayrollGenerationService
 
@@ -195,6 +199,49 @@ export const getPayrollGenerationsByUser = async (
 };
 
 /**
+ * Approve Payroll
+ */
+
+export const approvePayroll = async (
+
+  req: Request,
+
+  res: Response,
+
+  next: NextFunction
+
+) => {
+
+  try {
+
+    const result =
+      await approvePayrollService(
+
+        String(req.params.id)
+
+      );
+
+    return sendResponse(
+
+      res,
+
+      200,
+
+      "Payroll approved successfully",
+
+      result
+
+    );
+
+  } catch (error) {
+
+    next(error);
+
+  }
+
+};
+
+/**
  * Mark Payroll Paid
  */
 
@@ -226,6 +273,49 @@ export const markPayrollPaid = async (
       200,
 
       "Payroll marked as paid successfully",
+
+      result
+
+    );
+
+  } catch (error) {
+
+    next(error);
+
+  }
+
+};
+
+/**
+ * Reject Payroll
+ */
+
+export const rejectPayroll = async (
+
+  req: Request,
+
+  res: Response,
+
+  next: NextFunction
+
+) => {
+
+  try {
+
+    const result =
+      await rejectPayrollService(
+
+        String(req.params.id)
+
+      );
+
+    return sendResponse(
+
+      res,
+
+      200,
+
+      "Payroll rejected successfully",
 
       result
 

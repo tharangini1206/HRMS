@@ -1,8 +1,13 @@
+import { formatCurrency } from "../utils/currency";
+import { getCompanyLogo } from "../utils/logo";
+
 export const generatePayslipTemplate = (
   payroll: any,
   employee: any
 ) => {
 
+    const companyLogo = getCompanyLogo();
+    
   return `
 <!DOCTYPE html>
 <html>
@@ -81,7 +86,26 @@ th{
 
 <div>
 
-<h2>COFOMO TECH</h2>
+<div style="display:flex;align-items:center;gap:15px;">
+
+<img
+src="${companyLogo}"
+style="height:70px;width:auto;"
+/>
+
+<div>
+
+<h2 style="margin:0;">
+COFOMO TECH
+</h2>
+
+<div>
+Employee Payroll Management System
+</div>
+
+</div>
+
+</div>
 
 <div>
 
@@ -163,11 +187,11 @@ Employee Payroll Management System
 
 <td>Basic</td>
 
-<td>${payroll.basic}</td>
+<td>${formatCurrency(payroll.basic)}</td>
 
 <td>PF Employee</td>
 
-<td>${payroll.pf_employee}</td>
+<td>${formatCurrency(payroll.pf_employee)}</td>
 
 </tr>
 
@@ -175,11 +199,11 @@ Employee Payroll Management System
 
 <td>HRA</td>
 
-<td>${payroll.hra}</td>
+<td>${formatCurrency(payroll.hra)}</td>
 
 <td>ESI Employee</td>
 
-<td>${payroll.esi_employee}</td>
+<td>${formatCurrency(payroll.esi_employee)}</td>
 
 </tr>
 
@@ -187,11 +211,11 @@ Employee Payroll Management System
 
 <td>Special Allowance</td>
 
-<td>${payroll.special_allowance}</td>
+<td>${formatCurrency(payroll.special_allowance)}</td>
 
 <td>Professional Tax</td>
 
-<td>${payroll.professional_tax}</td>
+<td>${formatCurrency(payroll.professional_tax)}</td>
 
 </tr>
 
@@ -199,11 +223,11 @@ Employee Payroll Management System
 
 <td>Bonus</td>
 
-<td>${payroll.bonus}</td>
+<td>${formatCurrency(payroll.bonus)}</td>
 
-<td>Income Tax</td>
+<td>TDS(Income Tax)</td>
 
-<td>${payroll.income_tax}</td>
+<td>${formatCurrency(payroll.income_tax)}</td>
 
 </tr>
 
@@ -211,11 +235,7 @@ Employee Payroll Management System
 
 <td>Gratuity</td>
 
-<td>${payroll.gratuity}</td>
-
-<td>TDS</td>
-
-<td>${payroll.tds_deduction}</td>
+<td>${formatCurrency(payroll.gratuity)}</td>
 
 </tr>
 
@@ -223,11 +243,11 @@ Employee Payroll Management System
 
 <td>Custom Earnings</td>
 
-<td>${payroll.custom_earnings}</td>
+<td>${formatCurrency(payroll.custom_earnings)}</td>
 
 <td>LOP Deduction</td>
 
-<td>${payroll.lop_deduction}</td>
+<td>${formatCurrency(payroll.lop_deduction)}</td>
 
 </tr>
 
@@ -239,7 +259,7 @@ Employee Payroll Management System
 
 <td>Custom Deductions</td>
 
-<td>${payroll.custom_deductions}</td>
+<td>${formatCurrency(payroll.custom_deductions)}</td>
 
 </tr>
 
@@ -251,7 +271,7 @@ Employee Payroll Management System
 
 <td>Other Deductions</td>
 
-<td>${payroll.other_deductions}</td>
+<td>${formatCurrency(payroll.other_deductions)}</td>
 
 </tr>
 
@@ -259,11 +279,11 @@ Employee Payroll Management System
 
 <th>Total Earnings</th>
 
-<th>${payroll.total_earnings}</th>
+<th>${formatCurrency(payroll.total_earnings)}</th>
 
 <th>Total Deductions</th>
 
-<th>${payroll.total_deductions}</th>
+<th>${formatCurrency(payroll.total_deductions)}</th>
 
 </tr>
 
@@ -311,7 +331,7 @@ Employee Payroll Management System
 
 <td><b>Gross Pay</b></td>
 
-<td>${payroll.gross_pay}</td>
+<td>${formatCurrency(payroll.gross_pay)}</td>
 
 </tr>
 
@@ -323,7 +343,7 @@ Employee Payroll Management System
 
 <b style="color:green;">
 
-${payroll.net_pay}
+${formatCurrency(payroll.net_pay)}
 
 </b>
 

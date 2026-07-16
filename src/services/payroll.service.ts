@@ -12,6 +12,8 @@ import {
 
 } from "../repositories/payroll.repository";
 
+import { calculateAnnualIncomeTaxService } from "../services/tax.service";
+
 /**
  * Create Employee Salary
  */
@@ -19,6 +21,19 @@ import {
 export const createPayrollService = async (
   body: any
 ) => {
+
+  /**
+   * Calculate Annual Income Tax
+   */
+
+  const annualIncomeTax =
+    await calculateAnnualIncomeTaxService(
+      body.annual_ctc,
+      body.variable_pay_percentage
+    );
+
+  body.annual_income_tax =
+    annualIncomeTax;
 
   return await createPayrollRepository(
     body
@@ -61,6 +76,19 @@ export const updatePayrollService = async (
   body: any
 
 ) => {
+
+  /**
+   * Calculate Annual Income Tax
+   */
+
+  const annualIncomeTax =
+    await calculateAnnualIncomeTaxService(
+      body.annual_ctc,
+      body.variable_pay_percentage
+    );
+
+  body.annual_income_tax =
+    annualIncomeTax;
 
   return await updatePayrollRepository(
 

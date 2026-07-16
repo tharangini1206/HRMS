@@ -154,15 +154,15 @@ export const generatePayslipService = async (
       fileName
     );
 
-  /**
-   * Delete Local PDF
-   */
+  // /**
+  //  * Delete Local PDF
+  //  */
 
-  if (fs.existsSync(pdfPath)) {
+  // if (fs.existsSync(pdfPath)) {
 
-    fs.unlinkSync(pdfPath);
+  //   fs.unlinkSync(pdfPath);
 
-  }
+  // }
 
   /**
    * Save Payslip

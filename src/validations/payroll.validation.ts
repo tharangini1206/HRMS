@@ -20,11 +20,6 @@ export const createPayrollSchema = z.object({
     .max(100, "Variable Pay cannot exceed 100")
     .default(0),
 
-  annual_income_tax: z
-    .number()
-    .min(0, "Annual Income Tax cannot be negative")
-    .default(0),
-
   effective_date: z
     .string()
     .refine(

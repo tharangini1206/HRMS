@@ -10,7 +10,11 @@ import {
 
   getPayrollGenerationsByUser,
 
+  approvePayroll,
+
   markPayrollPaid,
+
+  rejectPayroll,
 
   deletePayrollGeneration
 
@@ -100,6 +104,28 @@ router.get(
 );
 
 /**
+ * Approve Payroll
+ */
+
+router.patch(
+
+  "/approve/:id",
+
+  authMiddleware,
+
+  rbac([
+
+    "super_admin",
+
+    "finance"
+
+  ]),
+
+  approvePayroll
+
+);
+
+/**
  * Mark Payroll Paid
  */
 
@@ -128,6 +154,7 @@ router.patch(
 );
 
 
+
 /**
  * Get Payroll By Id
  */
@@ -149,6 +176,29 @@ router.get(
   ]),
 
   getPayrollGenerationById
+
+);
+
+
+/**
+ * Reject Payroll
+ */
+
+router.patch(
+
+  "/reject/:id",
+
+  authMiddleware,
+
+  rbac([
+
+    "super_admin",
+
+    "finance"
+
+  ]),
+
+  rejectPayroll
 
 );
 

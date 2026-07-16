@@ -13,7 +13,9 @@ import attendanceRoutes from "./attendance.routes";
 import payrollGenerationRoutes from "./payroll-generation.routes";
 import payslipRoutes from "./payslip.routes";
 import salaryStatementRoutes from "./salary-statement.routes";
-
+import taxRoutes from "./tax.routes";
+import payrollReportRoutes from "./payroll-report.routes";
+import bulkPayslipRoutes from "./bulk-payslip.routes";
 
 import resignationRoutes from "./resignation.routes";
 import settlementRoutes from "./settlement.routes";
@@ -38,6 +40,9 @@ router.use("/attendance", attendanceRoutes);
 router.use("/payroll-generation",payrollGenerationRoutes);
 router.use("/payslip",payslipRoutes);
 router.use("/salary-statements",salaryStatementRoutes);
+router.use("/tax", taxRoutes);
+router.use("/payroll-report",payrollReportRoutes);
+router.use("/bulk-payslips",bulkPayslipRoutes);
 
 
 
